@@ -6,6 +6,23 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.3.0] — 2026-05-07
+
+### Added — 6 extended components (41 total)
+
+- **Sparkline** — tiny inline SVG chart for stat cards. Tones, area fill, last-point highlight.
+- **Stat Card** — dashboard-grade metric tile with delta, trend indicator, and inline sparkline.
+- **Slider** — single-handle range slider with tick marks, suffix, custom min/max/step. Form-bound via CVA.
+- **Tag Input** — type-and-add tags with Enter/comma/Tab to commit, Backspace to remove. Form-bound via CVA.
+- **Tree** — recursive hierarchical view with expand/collapse, selection, and optional descriptions.
+- **Calendar** — month-view with tone-coded events, today highlight, and click-to-select dates.
+
+### Updated
+
+- Admin dashboard: stat tiles now use the new `KnStatCard` with embedded sparklines (replaces hand-built tiles).
+- Docs site: added "Extended" section to the sidebar with 6 new component pages.
+- Total components: 35 → 41.
+
 ## [0.2.0] — 2026-05-07
 
 ### Added — 8 advanced components (35 total)

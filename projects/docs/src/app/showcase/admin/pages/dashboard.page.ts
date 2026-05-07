@@ -9,6 +9,7 @@ import {
   KnDividerComponent,
   KnProgressComponent,
   KnSkeletonComponent,
+  KnStatCardComponent,
   KnTableComponent,
   KnColumn,
 } from 'kiln-ui';
@@ -20,6 +21,7 @@ interface Stat {
   value: string;
   delta: string;
   trend: 'up' | 'down' | 'flat';
+  spark: number[];
 }
 
 @Component({
@@ -30,7 +32,7 @@ interface Stat {
     FormsModule,
     KnCardComponent, KnButtonComponent, KnBadgeComponent, KnAvatarComponent,
     KnDividerComponent, KnProgressComponent, KnTableComponent,
-    KnDateRangePickerComponent, KnSkeletonComponent,
+    KnDateRangePickerComponent, KnSkeletonComponent, KnStatCardComponent,
   ],
   template: `
     <header class="page-head">
@@ -59,15 +61,14 @@ interface Stat {
         }
       } @else {
         @for (stat of stats; track stat.label) {
-          <kn-card padding="md">
-            <div class="stat__label">{{ stat.label }} · {{ stat.labelBn }}</div>
-            <div class="stat__value">{{ stat.value }}</div>
-            <div class="stat__delta" [attr.data-trend]="stat.trend">
-              @if (stat.trend === 'up') { ↑ }
-              @if (stat.trend === 'down') { ↓ }
-              {{ stat.delta }}
-            </div>
-          </kn-card>
+          <kn-stat-card
+            [label]="stat.label"
+            [labelSecondary]="stat.labelBn"
+            [value]="stat.value"
+            [delta]="stat.delta"
+            [trend]="stat.trend"
+            [sparkline]="stat.spark"
+          />
         }
       }
     </section>
@@ -262,10 +263,14 @@ export class DashboardPage implements OnInit {
   }
 
   protected readonly stats: Stat[] = [
-    { label: 'Revenue',    labelBn: 'আয়',         value: '৳1,84,320', delta: '+12.4% vs last week', trend: 'up'   },
-    { label: 'Orders',     labelBn: 'অর্ডার',      value: '342',       delta: '+8.1%',                trend: 'up'   },
-    { label: 'New customers', labelBn: 'নতুন গ্রাহক', value: '47',     delta: '+24.0%',               trend: 'up'   },
-    { label: 'Cancellations', labelBn: 'বাতিল',     value: '6',         delta: '−2.0%',                trend: 'down' },
+    { label: 'Revenue',       labelBn: 'আয়',         value: '৳1,84,320', delta: '+12.4% vs last week', trend: 'up',
+      spark: [120, 130, 128, 142, 138, 152, 160, 158, 168, 175, 184] },
+    { label: 'Orders',        labelBn: 'অর্ডার',      value: '342',       delta: '+8.1%',  trend: 'up',
+      spark: [220, 240, 230, 260, 250, 280, 295, 310, 320, 332, 342] },
+    { label: 'New customers', labelBn: 'নতুন গ্রাহক', value: '47',         delta: '+24.0%', trend: 'up',
+      spark: [22, 24, 28, 30, 35, 38, 41, 44, 47] },
+    { label: 'Cancellations', labelBn: 'বাতিল',       value: '6',          delta: '−2.0%',  trend: 'down',
+      spark: [10, 9, 8, 7, 8, 6, 7, 6] },
   ];
 
   protected readonly orders: Order[] = MOCK_ORDERS.slice(0, 8);

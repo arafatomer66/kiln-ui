@@ -64,6 +64,17 @@ export const COMPONENT_GROUPS: DocGroup[] = [
       { slug: 'command-palette',    label: 'Command Palette' },
     ],
   },
+  {
+    heading: 'Extended',
+    items: [
+      { slug: 'sparkline',  label: 'Sparkline' },
+      { slug: 'stat-card',  label: 'Stat Card' },
+      { slug: 'slider',     label: 'Slider' },
+      { slug: 'tag-input',  label: 'Tag Input' },
+      { slug: 'tree',       label: 'Tree' },
+      { slug: 'calendar',   label: 'Calendar' },
+    ],
+  },
 ];
 
 export const ALL_COMPONENT_SLUGS = COMPONENT_GROUPS.flatMap((g) => g.items.map((i) => i.slug));

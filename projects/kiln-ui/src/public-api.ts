@@ -46,3 +46,11 @@ export * from './lib/combobox';
 export * from './lib/file-upload';
 export * from './lib/date-range-picker';
 export * from './lib/command-palette';
+
+// Phase E — extended (v0.3)
+export * from './lib/sparkline';
+export * from './lib/stat-card';
+export * from './lib/slider';
+export * from './lib/tag-input';
+export * from './lib/tree';
+export * from './lib/calendar';
