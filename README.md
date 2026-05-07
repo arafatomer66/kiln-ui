@@ -8,7 +8,7 @@
 
 Standalone components · Signal-based APIs · Dual-script typography · **41 polished components**.
 
-[![npm](https://img.shields.io/npm/v/@kiln/ui.svg?label=npm&color=1B3A6F)](https://www.npmjs.com/package/@kiln/ui)
+[![npm](https://img.shields.io/npm/v/kiln-ui.svg?label=npm&color=1B3A6F)](https://www.npmjs.com/package/kiln-ui)
 [![license](https://img.shields.io/badge/license-MIT-1B3A6F)](./LICENSE)
 [![Angular](https://img.shields.io/badge/Angular-20%2B-1B3A6F)](https://angular.dev)
 [![Made in Dhaka](https://img.shields.io/badge/Made%20in-Dhaka%20%F0%9F%87%A7%F0%9F%87%A9-E8A33D)](#author)
@@ -36,14 +36,14 @@ Sharp 4px corners. Stamp shadow with no blur. Vibrant indigo and marigold accent
 ## 30-second quickstart
 
 ```bash
-npm install @kiln/ui @angular/cdk
+npm install kiln-ui @angular/cdk
 ```
 
 Register the provider in `app.config.ts`:
 
 ```ts
 import { ApplicationConfig } from '@angular/core';
-import { provideKilnUI } from '@kiln/ui';
+import { provideKilnUI } from 'kiln-ui';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -55,15 +55,15 @@ export const appConfig: ApplicationConfig = {
 Import the global styles in `src/styles.scss`:
 
 ```scss
-@use '@kiln/ui/styles/all' as *;
-@use '@kiln/ui/styles/fonts.css';
+@use 'kiln-ui/styles/all' as *;
+@use 'kiln-ui/styles/fonts.css';
 ```
 
 Use a component:
 
 ```ts
 import { Component } from '@angular/core';
-import { KnButtonComponent, KnCardComponent } from '@kiln/ui';
+import { KnButtonComponent, KnCardComponent } from 'kiln-ui';
 
 @Component({
   selector: 'app-hello',
@@ -137,7 +137,7 @@ Dark mode is built in — toggle with the `KnThemeService` or set `data-kn-theme
 ## Roadmap
 
 - **v0.1** — 27 components, docs site, npm release. (You are here.)
-- **v0.2** — Schematics (`ng add @kiln/ui`), File Upload, Tree, virtual-scroll Table.
+- **v0.2** — Schematics (`ng add kiln-ui`), File Upload, Tree, virtual-scroll Table.
 - **v0.3** — Charts wrapper, rich-text editor, command palette as a public component.
 - **v1.0** — Stable API, full a11y audit, comprehensive Bangla locale.
 

@@ -25,7 +25,7 @@ interface Member {
     <app-page-header eyebrow="COMPOSITE" title="Table" subtitle="Strongly-typed data table with column config, click-to-sort, and an empty state." />
 
     <h2>Import</h2>
-    <app-code-block [code]="'import { KnTableComponent, KnColumn } from \\'@kiln/ui\\';'" />
+    <app-code-block [code]="'import { KnTableComponent, KnColumn } from \\'kiln-ui\\';'" />
 
     <h2>Examples</h2>
 

@@ -46,11 +46,11 @@ import { PageHeaderComponent } from '../shared/page-header.component';
   `],
 })
 export class GettingStartedComponent {
-  protected readonly install = `npm install @kiln/ui @angular/cdk`;
+  protected readonly install = `npm install kiln-ui @angular/cdk`;
 
   protected readonly config = `import { ApplicationConfig } from '@angular/core';
 import { provideRouter } from '@angular/router';
-import { provideKilnUI } from '@kiln/ui';
+import { provideKilnUI } from 'kiln-ui';
 
 import { routes } from './app.routes';
 
@@ -61,8 +61,8 @@ export const appConfig: ApplicationConfig = {
   ],
 };`;
 
-  protected readonly styles = `@use '@kiln/ui/styles/all' as *;
-@use '@kiln/ui/styles/fonts.css';
+  protected readonly styles = `@use 'kiln-ui/styles/all' as *;
+@use 'kiln-ui/styles/fonts.css';
 
 body {
   font-family: var(--kn-font-sans);
@@ -71,7 +71,7 @@ body {
 }`;
 
   protected readonly usage = `import { Component } from '@angular/core';
-import { KnButtonComponent, KnCardComponent } from '@kiln/ui';
+import { KnButtonComponent, KnCardComponent } from 'kiln-ui';
 
 @Component({
   selector: 'app-hello',

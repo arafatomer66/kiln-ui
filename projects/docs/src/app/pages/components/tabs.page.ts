@@ -50,7 +50,7 @@ import { CodeBlockComponent } from '../../shared/code-block.component';
   styles: [`:host { display: block; color: var(--kn-text); } h2 { font-family: var(--kn-font-display); font-size: var(--kn-fs-2xl); margin: var(--kn-sp-7) 0 var(--kn-sp-3); }`],
 })
 export class TabsPage {
-  protected readonly importCode = `import { KnTabsComponent, KnTabComponent, KnTabContentDirective } from '@kiln/ui';`;
+  protected readonly importCode = `import { KnTabsComponent, KnTabComponent, KnTabContentDirective } from 'kiln-ui';`;
 
   protected readonly basic = `<kn-tabs (activeChange)="onTab($event)">
   <kn-tab label="Overview">

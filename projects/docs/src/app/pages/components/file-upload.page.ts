@@ -18,7 +18,7 @@ import { CodeBlockComponent } from '../../shared/code-block.component';
     />
 
     <h2>Import</h2>
-    <app-code-block [code]="'import { KnFileUploadComponent } from \\'@kiln/ui\\';'" />
+    <app-code-block [code]="'import { KnFileUploadComponent } from \\'kiln-ui\\';'" />
 
     <h2>Examples</h2>
 

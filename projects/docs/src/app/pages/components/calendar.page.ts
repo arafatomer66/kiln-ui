@@ -15,7 +15,7 @@ import { CodeBlockComponent } from '../../shared/code-block.component';
     <app-page-header eyebrow="EXTENDED" title="Calendar" subtitle="Month view with event slots. Tone-coded events, today highlight, navigation, click-to-select." />
 
     <h2>Import</h2>
-    <app-code-block [code]="'import { KnCalendarComponent, KnCalendarEvent } from \\'@kiln/ui\\';'" />
+    <app-code-block [code]="'import { KnCalendarComponent, KnCalendarEvent } from \\'kiln-ui\\';'" />
 
     <h2>Examples</h2>
 

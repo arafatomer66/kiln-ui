@@ -14,7 +14,7 @@ import { CodeBlockComponent } from '../../shared/code-block.component';
     <app-page-header eyebrow="EXTENDED" title="Sparkline" subtitle="Tiny inline SVG chart for stat cards and dashboards. No deps — pure SVG." />
 
     <h2>Import</h2>
-    <app-code-block [code]="'import { KnSparklineComponent } from \\'@kiln/ui\\';'" />
+    <app-code-block [code]="'import { KnSparklineComponent } from \\'kiln-ui\\';'" />
 
     <h2>Examples</h2>
 

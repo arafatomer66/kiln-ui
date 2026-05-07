@@ -72,7 +72,7 @@ export class CommandPalettePage {
     ];
   }
 
-  protected readonly importCode = `import { KnCommandPaletteService, KnCommand } from '@kiln/ui';`;
+  protected readonly importCode = `import { KnCommandPaletteService, KnCommand } from 'kiln-ui';`;
 
   protected readonly usage = `private readonly palette = inject(KnCommandPaletteService);
 

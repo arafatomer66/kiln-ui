@@ -15,7 +15,7 @@ import { CodeBlockComponent } from '../../shared/code-block.component';
     <app-page-header eyebrow="EXTENDED" title="Slider" subtitle="Single-handle range slider with tick marks, suffix, and form integration via CVA." />
 
     <h2>Import</h2>
-    <app-code-block [code]="'import { KnSliderComponent } from \\'@kiln/ui\\';'" />
+    <app-code-block [code]="'import { KnSliderComponent } from \\'kiln-ui\\';'" />
 
     <h2>Examples</h2>
 

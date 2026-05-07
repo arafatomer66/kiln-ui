@@ -14,7 +14,7 @@ import { CodeBlockComponent } from '../../shared/code-block.component';
     <app-page-header eyebrow="FOUNDATION" title="Switch" subtitle="Toggle a setting on or off. Use for instant-effect preferences." />
 
     <h2>Import</h2>
-    <app-code-block [code]="'import { KnSwitchComponent } from \\'@kiln/ui\\';'" />
+    <app-code-block [code]="'import { KnSwitchComponent } from \\'kiln-ui\\';'" />
 
     <h2>Examples</h2>
     <app-example title="Basic" [code]="basic"><kn-switch label="Enable notifications" /></app-example>

@@ -17,7 +17,7 @@ import { CodeBlockComponent } from '../../shared/code-block.component';
     <app-page-header eyebrow="COMPOSITE" title="Stepper" subtitle="Linear progress through a multi-step flow. Horizontal or vertical." />
 
     <h2>Import</h2>
-    <app-code-block [code]="'import { KnStepperComponent, KnStep } from \\'@kiln/ui\\';'" />
+    <app-code-block [code]="'import { KnStepperComponent, KnStep } from \\'kiln-ui\\';'" />
 
     <h2>Examples</h2>
 

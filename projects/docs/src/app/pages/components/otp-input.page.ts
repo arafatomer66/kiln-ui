@@ -14,7 +14,7 @@ import { CodeBlockComponent } from '../../shared/code-block.component';
     <app-page-header eyebrow="ADVANCED" title="OTP Input" subtitle="Six-digit one-time password input with auto-advance, paste support, and keyboard navigation. Built for phone-OTP login flows." />
 
     <h2>Import</h2>
-    <app-code-block [code]="'import { KnOtpInputComponent } from \\'@kiln/ui\\';'" />
+    <app-code-block [code]="'import { KnOtpInputComponent } from \\'kiln-ui\\';'" />
 
     <h2>Examples</h2>
 

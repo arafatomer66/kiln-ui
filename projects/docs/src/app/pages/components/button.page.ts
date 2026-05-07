@@ -122,7 +122,7 @@ export class ButtonPage {
   protected readonly count = signal(0);
   protected bump(): void { this.count.update((n) => n + 1); }
 
-  protected readonly importCode = `import { KnButtonComponent } from '@kiln/ui';`;
+  protected readonly importCode = `import { KnButtonComponent } from 'kiln-ui';`;
 
   protected readonly variantsCode = `<kn-button variant="solid">Solid</kn-button>
 <kn-button variant="outline">Outline</kn-button>

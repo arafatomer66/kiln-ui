@@ -54,7 +54,7 @@ export class DrawerPage {
   protected openLeft(): void { this.drawer.open(EditProfileDrawer, { side: 'left' }); }
   protected openRight(): void { this.drawer.open(EditProfileDrawer, { side: 'right' }); }
 
-  protected readonly importCode = `import { KnDrawerService, KnDrawerComponent, KnDrawerFooterComponent } from '@kiln/ui';`;
+  protected readonly importCode = `import { KnDrawerService, KnDrawerComponent, KnDrawerFooterComponent } from 'kiln-ui';`;
 
   protected readonly usage = `drawer.open(EditProfileDrawer, { side: 'right', size: 'md' });`;
 

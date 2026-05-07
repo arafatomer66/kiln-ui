@@ -14,7 +14,7 @@ import { CodeBlockComponent } from '../../shared/code-block.component';
     <app-page-header eyebrow="FOUNDATION" title="Alert" subtitle="Persistent inline message — info, success, warn, or danger. Pairs the corner motifs with a tone-coded side bar." />
 
     <h2>Import</h2>
-    <app-code-block [code]="'import { KnAlertComponent } from \\'@kiln/ui\\';'" />
+    <app-code-block [code]="'import { KnAlertComponent } from \\'kiln-ui\\';'" />
 
     <h2>Examples</h2>
 

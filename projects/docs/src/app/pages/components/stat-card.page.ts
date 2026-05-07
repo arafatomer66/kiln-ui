@@ -14,7 +14,7 @@ import { CodeBlockComponent } from '../../shared/code-block.component';
     <app-page-header eyebrow="EXTENDED" title="Stat Card" subtitle="Dashboard-grade metric tile with delta, trend indicator, and inline sparkline. The pattern you use 4 times on every dashboard." />
 
     <h2>Import</h2>
-    <app-code-block [code]="'import { KnStatCardComponent } from \\'@kiln/ui\\';'" />
+    <app-code-block [code]="'import { KnStatCardComponent } from \\'kiln-ui\\';'" />
 
     <h2>Examples</h2>
 

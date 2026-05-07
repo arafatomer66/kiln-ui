@@ -56,7 +56,7 @@ import { CodeBlockComponent } from '../../shared/code-block.component';
   styles: [`:host { display: block; color: var(--kn-text); } h2 { font-family: var(--kn-font-display); font-size: var(--kn-fs-2xl); margin: var(--kn-sp-7) 0 var(--kn-sp-3); }`],
 })
 export class AccordionPage {
-  protected readonly importCode = `import { KnAccordionComponent, KnAccordionItemComponent } from '@kiln/ui';`;
+  protected readonly importCode = `import { KnAccordionComponent, KnAccordionItemComponent } from 'kiln-ui';`;
 
   protected readonly single = `<kn-accordion>
   <kn-accordion-item heading="What is Kiln UI?">…</kn-accordion-item>

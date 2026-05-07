@@ -17,7 +17,7 @@ import { CodeBlockComponent } from '../../shared/code-block.component';
     <app-page-header eyebrow="COMPOSITE" title="Date Picker" subtitle="Single-date calendar picker with a 7-column grid. CVA-bound for forms." />
 
     <h2>Import</h2>
-    <app-code-block [code]="'import { KnDatePickerComponent } from \\'@kiln/ui\\';'" />
+    <app-code-block [code]="'import { KnDatePickerComponent } from \\'kiln-ui\\';'" />
 
     <h2>Examples</h2>
 

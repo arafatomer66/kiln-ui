@@ -14,7 +14,7 @@ import { CodeBlockComponent } from '../../shared/code-block.component';
     <app-page-header eyebrow="FOUNDATION" title="Textarea" subtitle="Multi-line text input with helper, error state, and form integration." />
 
     <h2>Import</h2>
-    <app-code-block [code]="'import { KnTextareaComponent } from \\'@kiln/ui\\';'" />
+    <app-code-block [code]="'import { KnTextareaComponent } from \\'kiln-ui\\';'" />
 
     <h2>Examples</h2>
 

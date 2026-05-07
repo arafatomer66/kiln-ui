@@ -14,7 +14,7 @@ import { CodeBlockComponent } from '../../shared/code-block.component';
     <app-page-header eyebrow="FOUNDATION" title="Badge" subtitle="A compact label for status, counts, or tags. Pairs with text inline." />
 
     <h2>Import</h2>
-    <app-code-block [code]="'import { KnBadgeComponent } from \\'@kiln/ui\\';'" />
+    <app-code-block [code]="'import { KnBadgeComponent } from \\'kiln-ui\\';'" />
 
     <h2>Examples</h2>
 

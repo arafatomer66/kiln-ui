@@ -14,7 +14,7 @@ import { CodeBlockComponent } from '../../shared/code-block.component';
     <app-page-header eyebrow="FOUNDATION" title="Progress" subtitle="Linear progress bar. Supports determinate and indeterminate modes." />
 
     <h2>Import</h2>
-    <app-code-block [code]="'import { KnProgressComponent } from \\'@kiln/ui\\';'" />
+    <app-code-block [code]="'import { KnProgressComponent } from \\'kiln-ui\\';'" />
 
     <h2>Examples</h2>
 

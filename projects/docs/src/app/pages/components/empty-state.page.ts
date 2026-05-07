@@ -17,7 +17,7 @@ import { CodeBlockComponent } from '../../shared/code-block.component';
     <app-page-header eyebrow="ADVANCED" title="Empty State" subtitle="On-brand empty-state container with the alpana motif. Use when a list, table, or page has nothing to show." />
 
     <h2>Import</h2>
-    <app-code-block [code]="'import { KnEmptyStateComponent } from \\'@kiln/ui\\';'" />
+    <app-code-block [code]="'import { KnEmptyStateComponent } from \\'kiln-ui\\';'" />
 
     <h2>Examples</h2>
 

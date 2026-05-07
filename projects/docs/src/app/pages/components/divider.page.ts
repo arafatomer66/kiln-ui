@@ -14,7 +14,7 @@ import { CodeBlockComponent } from '../../shared/code-block.component';
     <app-page-header eyebrow="FOUNDATION" title="Divider" subtitle="Horizontal separator. Plain, dotted with motif, or alpana — Kiln UI's signature variant." />
 
     <h2>Import</h2>
-    <app-code-block [code]="'import { KnDividerComponent } from \\'@kiln/ui\\';'" />
+    <app-code-block [code]="'import { KnDividerComponent } from \\'kiln-ui\\';'" />
 
     <h2>Examples</h2>
 

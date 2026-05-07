@@ -14,7 +14,7 @@ import { CodeBlockComponent } from '../../shared/code-block.component';
     <app-page-header eyebrow="FOUNDATION" title="Chip" subtitle="Inline tag for filters, multi-select selections, or active criteria." />
 
     <h2>Import</h2>
-    <app-code-block [code]="'import { KnChipComponent } from \\'@kiln/ui\\';'" />
+    <app-code-block [code]="'import { KnChipComponent } from \\'kiln-ui\\';'" />
 
     <h2>Examples</h2>
 

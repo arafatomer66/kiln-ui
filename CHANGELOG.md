@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.3.1] — 2026-05-07
+
+### Changed
+
+- Renamed npm package from `@kiln/ui` to **`kiln-ui`** (unscoped). The `@kiln` org didn't exist on npm, so the unscoped name is both available and shorter to type. All docs and import examples updated. The workspace path alias `kiln-ui` already matched, so app imports are unchanged.
+
 ## [0.3.0] — 2026-05-07
 
 ### Added — 6 extended components (41 total)

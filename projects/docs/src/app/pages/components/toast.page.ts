@@ -42,7 +42,7 @@ export class ToastPage {
   protected warn(): void { this.toast.warn('Slow connection', 'Retrying in 5s…'); }
   protected danger(): void { this.toast.danger('Failed', 'Could not reach the server.'); }
 
-  protected readonly importCode = `import { KnToastService, KnToastContainerComponent } from '@kiln/ui';`;
+  protected readonly importCode = `import { KnToastService, KnToastContainerComponent } from 'kiln-ui';`;
 
   protected readonly setup = `// app.ts
 @Component({

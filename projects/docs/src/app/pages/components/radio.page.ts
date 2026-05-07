@@ -43,7 +43,7 @@ import { CodeBlockComponent } from '../../shared/code-block.component';
   styles: [`:host { display: block; color: var(--kn-text); } h2 { font-family: var(--kn-font-display); font-size: var(--kn-fs-2xl); margin: var(--kn-sp-7) 0 var(--kn-sp-3); }`],
 })
 export class RadioPage {
-  protected readonly importCode = `import { KnRadioGroupComponent, KnRadioComponent } from '@kiln/ui';`;
+  protected readonly importCode = `import { KnRadioGroupComponent, KnRadioComponent } from 'kiln-ui';`;
 
   protected readonly vertical = `<kn-radio-group [(ngModel)]="plan">
   <kn-radio [value]="'starter'" label="Starter" />

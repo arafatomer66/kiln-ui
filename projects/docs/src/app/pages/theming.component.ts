@@ -96,7 +96,7 @@ export class ThemingComponent {
 }`;
 
   protected readonly darkMode = `import { inject } from '@angular/core';
-import { KnThemeService } from '@kiln/ui';
+import { KnThemeService } from 'kiln-ui';
 
 const theme = inject(KnThemeService);
 theme.setTheme('dark');

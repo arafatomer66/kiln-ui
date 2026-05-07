@@ -15,7 +15,7 @@ import { CodeBlockComponent } from '../../shared/code-block.component';
     <app-page-header eyebrow="EXTENDED" title="Tag Input" subtitle="Type, press Enter, get a tag. Backspace removes the last tag. Comma also commits. Form-bound via CVA." />
 
     <h2>Import</h2>
-    <app-code-block [code]="'import { KnTagInputComponent } from \\'@kiln/ui\\';'" />
+    <app-code-block [code]="'import { KnTagInputComponent } from \\'kiln-ui\\';'" />
 
     <h2>Examples</h2>
 

@@ -42,7 +42,7 @@ import { CodeBlockComponent } from '../../shared/code-block.component';
   styles: [`:host { display: block; color: var(--kn-text); } h2 { font-family: var(--kn-font-display); font-size: var(--kn-fs-2xl); margin: var(--kn-sp-7) 0 var(--kn-sp-3); }`],
 })
 export class MenuPage {
-  protected readonly importCode = `import { KnMenuItemComponent, KnMenuDividerComponent, KnMenuLabelComponent } from '@kiln/ui';`;
+  protected readonly importCode = `import { KnMenuItemComponent, KnMenuDividerComponent, KnMenuLabelComponent } from 'kiln-ui';`;
 
   protected readonly composed = `<kn-menu-label>Account</kn-menu-label>
 <kn-menu-item icon="◐">Profile</kn-menu-item>

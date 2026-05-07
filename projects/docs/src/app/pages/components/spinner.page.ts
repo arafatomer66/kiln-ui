@@ -14,7 +14,7 @@ import { CodeBlockComponent } from '../../shared/code-block.component';
     <app-page-header eyebrow="FOUNDATION" title="Spinner" subtitle="Indeterminate loading indicator. Pairs with text or wraps blocks." />
 
     <h2>Import</h2>
-    <app-code-block [code]="'import { KnSpinnerComponent } from \\'@kiln/ui\\';'" />
+    <app-code-block [code]="'import { KnSpinnerComponent } from \\'kiln-ui\\';'" />
 
     <h2>Examples</h2>
 

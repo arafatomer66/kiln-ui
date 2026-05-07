@@ -12,7 +12,7 @@ npm install
 
 The repo is an Angular workspace with two projects:
 
-- **`projects/kiln-ui`** — the publishable library (`@kiln/ui`).
+- **`projects/kiln-ui`** — the publishable library (`kiln-ui`).
 - **`projects/docs`** — the documentation + demo site, deployed to GitHub Pages.
 
 ### Common scripts

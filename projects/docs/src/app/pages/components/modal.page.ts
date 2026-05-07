@@ -55,7 +55,7 @@ export class ModalPage {
     this.modal.open(DeleteConfirmModal, { size: 'sm', ariaLabel: 'Delete project' });
   }
 
-  protected readonly importCode = `import { KnModalService, KnModalComponent, KnModalFooterComponent } from '@kiln/ui';`;
+  protected readonly importCode = `import { KnModalService, KnModalComponent, KnModalFooterComponent } from 'kiln-ui';`;
 
   protected readonly usage = `// In your modal content component:
 @Component({

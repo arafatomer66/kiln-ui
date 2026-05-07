@@ -14,7 +14,7 @@ import { CodeBlockComponent } from '../../shared/code-block.component';
     <app-page-header eyebrow="ADVANCED" title="Skeleton" subtitle="Animated placeholder for loading states. Pair with real layout to preserve dimensions while data loads." />
 
     <h2>Import</h2>
-    <app-code-block [code]="'import { KnSkeletonComponent } from \\'@kiln/ui\\';'" />
+    <app-code-block [code]="'import { KnSkeletonComponent } from \\'kiln-ui\\';'" />
 
     <h2>Examples</h2>
 

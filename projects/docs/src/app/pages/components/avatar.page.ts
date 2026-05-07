@@ -14,7 +14,7 @@ import { CodeBlockComponent } from '../../shared/code-block.component';
     <app-page-header eyebrow="FOUNDATION" title="Avatar" subtitle="Round or square user image with automatic initials fallback." />
 
     <h2>Import</h2>
-    <app-code-block [code]="'import { KnAvatarComponent } from \\'@kiln/ui\\';'" />
+    <app-code-block [code]="'import { KnAvatarComponent } from \\'kiln-ui\\';'" />
 
     <h2>Examples</h2>
 

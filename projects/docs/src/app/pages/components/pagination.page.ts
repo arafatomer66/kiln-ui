@@ -17,7 +17,7 @@ import { CodeBlockComponent } from '../../shared/code-block.component';
     <app-page-header eyebrow="COMPOSITE" title="Pagination" subtitle="Page-by-page navigation with collapsing ellipses for long ranges." />
 
     <h2>Import</h2>
-    <app-code-block [code]="'import { KnPaginationComponent } from \\'@kiln/ui\\';'" />
+    <app-code-block [code]="'import { KnPaginationComponent } from \\'kiln-ui\\';'" />
 
     <h2>Examples</h2>
 

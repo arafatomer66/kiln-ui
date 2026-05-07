@@ -14,7 +14,7 @@ import { CodeBlockComponent } from '../../shared/code-block.component';
     <app-page-header eyebrow="OVERLAY" title="Tooltip" subtitle="Reveal contextual help on hover or focus. Works on any element via the [knTooltip] directive." />
 
     <h2>Import</h2>
-    <app-code-block [code]="'import { KnTooltipDirective } from \\'@kiln/ui\\';'" />
+    <app-code-block [code]="'import { KnTooltipDirective } from \\'kiln-ui\\';'" />
 
     <h2>Examples</h2>
 

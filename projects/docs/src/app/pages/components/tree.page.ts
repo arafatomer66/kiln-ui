@@ -14,7 +14,7 @@ import { CodeBlockComponent } from '../../shared/code-block.component';
     <app-page-header eyebrow="EXTENDED" title="Tree" subtitle="Hierarchical expand/collapse view. Selectable nodes, optional descriptions, recursive rendering." />
 
     <h2>Import</h2>
-    <app-code-block [code]="'import { KnTreeComponent, KnTreeNode } from \\'@kiln/ui\\';'" />
+    <app-code-block [code]="'import { KnTreeComponent, KnTreeNode } from \\'kiln-ui\\';'" />
 
     <h2>Examples</h2>
 

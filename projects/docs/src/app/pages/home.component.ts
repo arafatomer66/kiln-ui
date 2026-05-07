@@ -264,11 +264,11 @@ import { CodeBlockComponent } from '../shared/code-block.component';
   `],
 })
 export class HomeComponent {
-  protected readonly installCode = `npm install @kiln/ui @angular/cdk`;
+  protected readonly installCode = `npm install kiln-ui @angular/cdk`;
 
   protected readonly appConfigCode = `import { ApplicationConfig } from '@angular/core';
 import { provideRouter } from '@angular/router';
-import { provideKilnUI } from '@kiln/ui';
+import { provideKilnUI } from 'kiln-ui';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -278,7 +278,7 @@ export const appConfig: ApplicationConfig = {
 };`;
 
   protected readonly useCode = `import { Component } from '@angular/core';
-import { KnButtonComponent, KnCardComponent } from '@kiln/ui';
+import { KnButtonComponent, KnCardComponent } from 'kiln-ui';
 
 @Component({
   selector: 'app-hello',

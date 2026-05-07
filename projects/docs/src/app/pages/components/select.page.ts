@@ -18,7 +18,7 @@ import { CodeBlockComponent } from '../../shared/code-block.component';
     <app-page-header eyebrow="OVERLAY" title="Select" subtitle="A searchable single-value picker. Form-bound via ControlValueAccessor." />
 
     <h2>Import</h2>
-    <app-code-block [code]="'import { KnSelectComponent } from \\'@kiln/ui\\';'" />
+    <app-code-block [code]="'import { KnSelectComponent } from \\'kiln-ui\\';'" />
 
     <h2>Examples</h2>
 
