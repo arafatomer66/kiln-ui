@@ -1,18 +1,18 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 import { KnToastContainerComponent } from 'kiln-ui';
-import { ShellComponent } from './layout/shell.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [ShellComponent, KnToastContainerComponent],
+  imports: [RouterOutlet, KnToastContainerComponent],
   template: `
-    <app-shell />
+    <router-outlet />
     <kn-toast-container position="top-right" />
   `,
   styles: [`
-    :host { display: block; }
+    :host { display: block; min-height: 100vh; }
   `],
 })
 export class App {}

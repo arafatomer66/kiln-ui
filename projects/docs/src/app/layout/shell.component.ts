@@ -19,6 +19,7 @@ import { COMPONENT_GROUPS } from './components-nav';
         <a routerLink="/getting-started" routerLinkActive="is-active">Get started</a>
         <a routerLink="/components/button" routerLinkActive="is-active">Components</a>
         <a routerLink="/theming" routerLinkActive="is-active">Theming</a>
+        <a routerLink="/showcase/admin" routerLinkActive="is-active">Showcase</a>
         <a routerLink="/about" routerLinkActive="is-active">About</a>
       </nav>
 

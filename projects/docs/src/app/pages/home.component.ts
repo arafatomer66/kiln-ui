@@ -103,6 +103,23 @@ import { CodeBlockComponent } from '../shared/code-block.component';
       </div>
     </section>
 
+    <section class="showcase-cta">
+      <kn-card variant="stamp" padding="lg" [interactive]="true" routerLink="/showcase/admin">
+        <div class="showcase-cta__inner">
+          <div>
+            <div class="showcase-cta__eyebrow">SHOWCASE · APPLIED EXAMPLE</div>
+            <h2 class="showcase-cta__title">See it in action — admin demo</h2>
+            <p class="showcase-cta__body">
+              A realistic mini-CRM built entirely from Kiln UI primitives. Sidebar nav, dashboard with stats &amp; activity feed,
+              orders with filters and pagination, customers with tabbed detail, products grid, multi-tab settings.
+              22 of the 27 components on a single page.
+            </p>
+            <kn-button variant="solid" size="lg" routerLink="/showcase/admin">Open the demo →</kn-button>
+          </div>
+        </div>
+      </kn-card>
+    </section>
+
     <kn-alert tone="info" title="Heads up">
       This is v0.1 — feedback, issues, and contributions are warmly welcome on
       <a href="https://github.com/arafatomer66/kiln-ui" target="_blank" rel="noreferrer">GitHub</a>.
@@ -220,6 +237,30 @@ import { CodeBlockComponent } from '../shared/code-block.component';
     code { background: var(--kn-surface-alt); padding: 1px 6px; border-radius: var(--kn-r-xs); }
 
     em { font-style: italic; color: var(--kn-text); }
+
+    .showcase-cta { margin: var(--kn-sp-9) 0; }
+    .showcase-cta__inner { display: block; }
+    .showcase-cta__eyebrow {
+      font-family: var(--kn-font-mono);
+      font-size: var(--kn-fs-xs);
+      font-weight: var(--kn-fw-bold);
+      letter-spacing: var(--kn-tracking-mono);
+      text-transform: uppercase;
+      color: var(--kn-accent-strong);
+      margin-bottom: var(--kn-sp-2);
+    }
+    .showcase-cta__title {
+      font-family: var(--kn-font-display);
+      font-size: var(--kn-fs-2xl);
+      font-weight: var(--kn-fw-bold);
+      margin: 0 0 var(--kn-sp-3);
+    }
+    .showcase-cta__body {
+      color: var(--kn-text-muted);
+      line-height: var(--kn-lh-relaxed);
+      max-width: 640px;
+      margin-bottom: var(--kn-sp-4);
+    }
   `],
 })
 export class HomeComponent {
