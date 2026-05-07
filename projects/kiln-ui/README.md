@@ -6,7 +6,7 @@
 
 **An Angular component library inspired by Bangladeshi visual heritage.**
 
-Standalone components · Signal-based APIs · Dual-script typography · **41 polished components**.
+Standalone components · Signal-based APIs · Dual-script typography · **56 polished components**.
 
 [![npm](https://img.shields.io/npm/v/kiln-ui.svg?label=npm&color=1B3A6F)](https://www.npmjs.com/package/kiln-ui)
 [![license](https://img.shields.io/badge/license-MIT-1B3A6F)](https://github.com/arafatomer66/kiln-ui/blob/main/LICENSE)
@@ -110,7 +110,7 @@ Press **⌘K** / **Ctrl+K** anywhere on the docs site to try the command palette
 
 ## Components
 
-All 41 components are **standalone**, **signal-based**, **OnPush by default**, and ship with full ARIA support.
+All 56 components are **standalone**, **signal-based**, **OnPush by default**, and ship with full ARIA support.
 
 ### Foundation (14)
 Button · Input · Textarea · Checkbox · Radio · Switch · Badge · Chip · Avatar · Spinner · Progress · Divider · Card · Alert
@@ -126,6 +126,9 @@ Skeleton · Empty State · OTP Input · Phone Input · Combobox · File Upload �
 
 ### Extended (6)
 Sparkline · Stat Card · Slider · Tag Input · Tree · Calendar
+
+### Pro (15)
+Form Field · Time Picker · Number Format Input · Color Picker · Rating · Avatar Group · Breadcrumbs · Page State · Loading Bar · Confirm Dialog · Bottom Sheet · Action Sheet · Pull to Refresh · Tour · Virtual Table
 
 Each component has its own documentation page with live examples, copy-paste code, an API reference table, and accessibility notes — see the [docs site](https://arafatomer66.github.io/kiln-ui).
 
@@ -165,9 +168,9 @@ If any of that resonates, I'd love your feedback or contribution.
 
 - **v0.1** — Foundation, overlay, and composite components (27).
 - **v0.2** — Advanced set (8): OTP, phone, combobox, file upload, date range, command palette, skeleton, empty state.
-- **v0.3** — Extended set (6): sparkline, stat card, slider, tag input, tree, calendar. **(You are here.)**
-- **v0.4** — Schematics (`ng add kiln-ui`), virtual-scroll table.
-- **v1.0** — Stable API, full a11y audit, comprehensive Bangla locale, plugin packages (`kiln-charts`, `kiln-editor`).
+- **v0.3** — Extended set (6): sparkline, stat card, slider, tag input, tree, calendar. Plus `ng add kiln-ui` schematic.
+- **v0.4** — Pro set (15): form field, time picker, number format, color picker, rating, avatar group, breadcrumbs, page state, loading bar, confirm dialog, bottom sheet, action sheet, pull to refresh, tour, virtual table. **(You are here — 56 components total.)**
+- **v1.0** — Stable API, full a11y audit, comprehensive Bangla locale, plugin packages (`kiln-charts`, `kiln-icons`, `kiln-editor`).
 
 ---
 

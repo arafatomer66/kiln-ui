@@ -6,7 +6,7 @@
 
 **An Angular component library inspired by Bangladeshi visual heritage.**
 
-Standalone components · Signal-based APIs · Dual-script typography · **41 polished components**.
+Standalone components · Signal-based APIs · Dual-script typography · **56 polished components**.
 
 [![npm](https://img.shields.io/npm/v/kiln-ui.svg?label=npm&color=1B3A6F)](https://www.npmjs.com/package/kiln-ui)
 [![license](https://img.shields.io/badge/license-MIT-1B3A6F)](./LICENSE)
@@ -110,7 +110,7 @@ Press **⌘K** / **Ctrl+K** anywhere on the docs site to try the command palette
 
 ## Components
 
-All 41 components are **standalone**, **signal-based**, **OnPush by default**, and ship with full ARIA support.
+All 56 components are **standalone**, **signal-based**, **OnPush by default**, and ship with full ARIA support.
 
 ### Foundation (14)
 Button · Input · Textarea · Checkbox · Radio · Switch · Badge · Chip · Avatar · Spinner · Progress · Divider · Card · Alert
@@ -126,6 +126,9 @@ Skeleton · Empty State · OTP Input · Phone Input · Combobox · File Upload �
 
 ### Extended (6 — v0.3)
 Sparkline · Stat Card · Slider · Tag Input · Tree · Calendar
+
+### Pro (15 — v0.4)
+Form Field · Time Picker · Number Format Input · Color Picker · Rating · Avatar Group · Breadcrumbs · Page State · Loading Bar · Confirm Dialog · Bottom Sheet · Action Sheet · Pull to Refresh · Tour · Virtual Table
 
 Each component has its own documentation page with live examples, copy-paste code, an API reference table, and accessibility notes — see the [docs site](https://arafatomer66.github.io/kiln-ui).
 

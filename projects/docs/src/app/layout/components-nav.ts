@@ -75,6 +75,26 @@ export const COMPONENT_GROUPS: DocGroup[] = [
       { slug: 'calendar',   label: 'Calendar' },
     ],
   },
+  {
+    heading: 'Pro',
+    items: [
+      { slug: 'form-field',           label: 'Form Field' },
+      { slug: 'time-picker',          label: 'Time Picker' },
+      { slug: 'number-format-input',  label: 'Number Format Input' },
+      { slug: 'color-picker',         label: 'Color Picker' },
+      { slug: 'rating',               label: 'Rating' },
+      { slug: 'avatar-group',         label: 'Avatar Group' },
+      { slug: 'breadcrumbs',          label: 'Breadcrumbs' },
+      { slug: 'page-state',           label: 'Page State' },
+      { slug: 'loading-bar',          label: 'Loading Bar' },
+      { slug: 'confirm',              label: 'Confirm Dialog' },
+      { slug: 'bottom-sheet',         label: 'Bottom Sheet' },
+      { slug: 'action-sheet',         label: 'Action Sheet' },
+      { slug: 'pull-to-refresh',      label: 'Pull to Refresh' },
+      { slug: 'tour',                 label: 'Tour' },
+      { slug: 'virtual-table',        label: 'Virtual Table' },
+    ],
+  },
 ];
 
 export const ALL_COMPONENT_SLUGS = COMPONENT_GROUPS.flatMap((g) => g.items.map((i) => i.slug));

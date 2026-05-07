@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Kiln UI launch post — copy &amp; paste into Medium</title>
+<style>
+  body { max-width: 720px; margin: 40px auto; padding: 0 20px; font-family: Georgia, serif; line-height: 1.7; color: #1a1a1a; }
+  h1 { font-size: 36px; line-height: 1.2; margin-top: 1.2em; }
+  h2 { font-size: 26px; margin-top: 1.6em; line-height: 1.3; }
+  h3 { font-size: 20px; margin-top: 1.4em; }
+  p { font-size: 18px; }
+  img { max-width: 100%; height: auto; border-radius: 4px; margin: 1em 0; display: block; }
+  a { color: #1B3A6F; text-decoration: underline; }
+  pre { background: #f5f5f5; padding: 16px; border-radius: 4px; overflow-x: auto; font-family: Menlo, Monaco, monospace; font-size: 14px; line-height: 1.5; }
+  code { background: #f5f5f5; padding: 2px 6px; border-radius: 3px; font-family: Menlo, Monaco, monospace; font-size: 0.9em; }
+  pre code { background: transparent; padding: 0; }
+  blockquote { border-left: 4px solid #ccc; margin-left: 0; padding-left: 16px; color: #555; font-style: italic; }
+  ul, ol { font-size: 18px; padding-left: 28px; }
+  li { margin: 6px 0; }
+  hr { border: none; border-top: 1px solid #eee; margin: 2em 0; }
+  .banner {
+    background: #1B3A6F; color: #fff; padding: 20px; border-radius: 6px; margin-bottom: 32px;
+    font-family: -apple-system, system-ui, sans-serif; font-style: normal;
+  }
+  .banner b { color: #E8A33D; }
+</style>
+</head>
+<body>
+<div class="banner">
+  <b>📋 Instructions:</b> Click anywhere in the article below, press <b>⌘A</b> (Cmd+A) to select all, then <b>⌘C</b> to copy. Paste into Medium's editor with <b>⌘V</b>. Headings, code blocks, images, and links will all preserve.
+</div>
+<h1>Building an Angular component library rooted in Bangladeshi visual heritage</h1>
+<p><em>How I shipped Kiln UI — 41 components, modern Angular, and a design language with a sense of place.</em></p>
+<hr>
+<p><img src="https://raw.githubusercontent.com/arafatomer66/kiln-ui/main/assets/preview-admin-dashboard.png" alt="Kiln UI admin dashboard — stat cards with sparklines, recent orders, activity feed, all rendered in jute neutrals and indigo on a Bangla-Latin layout"></p>
+<p>A few weeks ago I went looking for an Angular component library to bootstrap an internal dashboard. Material was fine. PrimeNG was fine. Taiga UI was fine.</p>
+<p>They were all <em>fine</em> in the way that a hotel lobby is fine. Comfortable, neutral, forgettable.</p>
+<p>Every &quot;neutral&quot; design system is anything but. Every shadow, corner radius, and accent color carries an aesthetic — and that aesthetic is almost always Silicon Valley. Soft greys, blue accents, 8px-rounded everything. It&#39;s not bad. It just has a <em>place</em>, and that place isn&#39;t here.</p>
+<p>I&#39;m in Dhaka. So I built a library that&#39;s openly, deliberately rooted somewhere.</p>
+<h2>What is Kiln UI?</h2>
+<p><a href="https://github.com/arafatomer66/kiln-ui"><strong>Kiln UI</strong></a> is an Angular component library inspired by Bangladeshi visual heritage. 41 components — standalone, signal-based, <code>OnPush</code> by default — with a design language drawn from three motifs:</p>
+<ul>
+<li><strong>Jute</strong> — the warm neutrals that define the page surface, drawn from the country&#39;s iconic export.</li>
+<li><strong>Nokshi kantha</strong> — geometric corner glyphs (<code>❖</code>) and alpana dividers, the embroidered patterns of stitched quilts.</li>
+<li><strong>Dual-script type</strong> — Latin and Bangla pairings (Inter × Hind Siliguri, Fraunces × Tiro Bangla), with matched x-heights and rhythm.</li>
+</ul>
+<p>The result is a system where sharp 4px corners replace puffy 16px ones. Stamp shadows (no blur, just an offset block) replace the blurry diffuse Material drop. Vibrant indigo and marigold accents replace the safe corporate blue. Every card carries small ❖ corner glyphs, like the corners of a stitched textile.</p>
+<p>It looks like Bangladesh. That&#39;s the entire experiment.</p>
+<h2>Modern Angular, no compromise</h2>
+<p>Aesthetics aside, I wanted the engineering bar to be high. Most &quot;indie&quot; component libraries cheat — they use NgModules, decorators-as-DI, missing accessibility, no form integration. Kiln UI uses modern Angular only:</p>
+<ul>
+<li><strong>Standalone components</strong> everywhere. No NgModules anywhere.</li>
+<li><strong>Signal-based APIs</strong> — <code>input()</code>, <code>output()</code>, <code>model()</code>, <code>signal()</code>, <code>computed()</code>. No <code>@Input/@Output</code> decorators.</li>
+<li><strong><code>inject()</code> for DI</strong> — no constructor injection.</li>
+<li><strong><code>ChangeDetectionStrategy.OnPush</code></strong> mandatory.</li>
+<li><strong><code>ControlValueAccessor</code></strong> on every form control — works with both reactive and template forms.</li>
+<li><strong><code>@angular/cdk</code></strong> for overlays, portals, and focus trap. Battle-tested behavior, on-brand styling.</li>
+<li><strong>Full ARIA</strong> on every interactive component, with keyboard navigation, focus rings, and screen-reader-tested labels.</li>
+</ul>
+<pre><code class="language-ts">import { Component } from &#39;@angular/core&#39;;
+import { KnButtonComponent, KnCardComponent } from &#39;kiln-ui&#39;;
+
+@Component({
+  selector: &#39;app-hello&#39;,
+  standalone: true,
+  imports: [KnButtonComponent, KnCardComponent],
+  template: `
+    &lt;kn-card&gt;
+      &lt;h2&gt;Welcome&lt;/h2&gt;
+      &lt;kn-button variant=&quot;solid&quot;&gt;Get started →&lt;/kn-button&gt;
+    &lt;/kn-card&gt;
+  `,
+})
+export class HelloComponent {}
+</code></pre>
+<p>That&#39;s the entire integration story.</p>
+<h2>The 41 components</h2>
+<p>Organized into five tiers, each tier deeper than the last:</p>
+<ul>
+<li><strong>Foundation (14)</strong> — Button, Input, Textarea, Checkbox, Radio, Switch, Badge, Chip, Avatar, Spinner, Progress, Divider, Card, Alert.</li>
+<li><strong>Overlay (7)</strong> — Tooltip, Dropdown, Menu, Select, Modal, Drawer, Toast.</li>
+<li><strong>Composite (6)</strong> — Tabs, Accordion, Stepper, Pagination, Date Picker, Table.</li>
+<li><strong>Advanced (8)</strong> — Skeleton, Empty State, OTP Input, Phone Input, Combobox, File Upload, Date Range Picker, Command Palette.</li>
+<li><strong>Extended (6)</strong> — Sparkline, Stat Card, Slider, Tag Input, Tree, Calendar.</li>
+</ul>
+<p>Two of those deserve a callout because they&#39;re aimed at the markets I work in:</p>
+<p><strong>OTP Input</strong> — six-digit auto-advance, paste support, <code>autocomplete=&quot;one-time-code&quot;</code> for iOS SMS auto-fill. Most consumer apps in Bangladesh, India, and the broader region use phone-OTP login. This is the input you reach for every single time, and most libraries don&#39;t have a good one.</p>
+<p><strong>Phone Input</strong> — international country picker defaulting to 🇧🇩 +880. Ships with 13 popular regions out of the box. Simple, direct, fully form-bound.</p>
+<p>The Command Palette is the showpiece — a fuzzy ⌘K-style launcher with grouped commands, shortcut hints, and run callbacks. It powers the docs site search and the admin demo.</p>
+<h2>Live admin demo</h2>
+<p>I needed something more than a feature catalog, so I built a polished mini-CRM showcase that uses 22+ components in realistic context:</p>
+<p><img src="https://raw.githubusercontent.com/arafatomer66/kiln-ui/main/assets/preview-admin-orders.png" alt="Kiln UI orders page with a sortable table, status filter, and pagination"></p>
+<ul>
+<li><strong>Dashboard</strong> with <code>KnStatCard</code> tiles, embedded sparklines, an activity feed, and a date-range picker.</li>
+<li><strong>Orders</strong> with sortable table, search, status filter, drawer-based detail view.</li>
+<li><strong>Customers</strong> with split list/detail, tabbed detail view, modal for adding new customers (using the phone input with a country picker).</li>
+<li><strong>Products</strong> with a card grid, low-stock badges, and tooltips.</li>
+<li><strong>Settings</strong> with tabbed forms, accordion of invoices, multi-step team-onboarding stepper that includes phone-OTP verification, and drag-drop file upload for avatars.</li>
+</ul>
+<p><a href="https://arafatomer66.github.io/kiln-ui/showcase/admin"><strong>Try the live demo →</strong></a></p>
+<p>Press <strong>⌘K</strong> anywhere on the docs site to try the command palette.</p>
+<h2>Theming with CSS variables only</h2>
+<p>Every visual decision is exposed as a CSS custom property prefixed with <code>--kn-</code>. Override per-instance, per-section, or app-wide:</p>
+<pre><code class="language-scss">:root {
+  --kn-brand: #0f5132;
+  --kn-brand-strong: #093d22;
+  --kn-accent: #ffd166;
+}
+</code></pre>
+<p>Dark mode is built in — toggle with <code>KnThemeService</code> or set <code>data-kn-theme=&quot;dark&quot;</code> on <code>&lt;html&gt;</code>.</p>
+<p>No SCSS import gymnastics. No theme generators. No build-time configs. Just override the variables you want.</p>
+<h2>One-line install</h2>
+<pre><code class="language-bash">npm install kiln-ui @angular/cdk
+</code></pre>
+<p>Or, even better, with the schematic that ships in the package:</p>
+<pre><code class="language-bash">ng add kiln-ui
+</code></pre>
+<p>This wires <code>provideKilnUI()</code> into your <code>app.config.ts</code>, imports the global styles + fonts into your <code>styles.scss</code>, adds <code>@angular/cdk</code> to your <code>package.json</code>, and runs <code>npm install</code>. One command and you&#39;re ready to import components.</p>
+<h2>Why I built this</h2>
+<p>Three reasons, in order of importance:</p>
+<ol>
+<li><p><strong>I wanted Angular tooling that felt rooted somewhere.</strong> That&#39;s the experiment. If you&#39;re an Angular developer in South Asia, in the Middle East, in any region whose visual heritage doesn&#39;t get represented in our tooling — this might land for you.</p>
+</li>
+<li><p><strong>I wanted to build with modern Angular properly.</strong> Not a drop-in Material clone with a dark theme. A library where every component goes through <code>ControlValueAccessor</code>, every overlay uses CDK, every interactive surface has <code>aria-*</code> attributes. The kind of library that doesn&#39;t make you wince when you <code>git blame</code> six months later.</p>
+</li>
+<li><p><strong>Most &quot;indie&quot; libraries have terrible documentation.</strong> I&#39;ve used many, and their docs pages are usually one Storybook page, three example variants, and a vibe-based prop description. Kiln UI&#39;s docs match the bar Material and PrimeNG set: per-component pages with at least 3 working examples, an API table, accessibility notes, and a copy-paste import line.</p>
+</li>
+</ol>
+<h2>What&#39;s next</h2>
+<ul>
+<li><strong>v0.4</strong> — schematics for component scaffolds (<code>ng generate @kiln-ui:component my-thing</code>), virtual-scroll table.</li>
+<li><strong>v1.0</strong> — stable API, full a11y audit, comprehensive Bangla locale, plugin packages (<code>kiln-charts</code> wrapping ApexCharts/Chart.js, <code>kiln-editor</code> wrapping Tiptap).</li>
+</ul>
+<p>If any of this resonates — the BD-heritage angle, the modern-Angular bar, the documentation philosophy — I&#39;d love your feedback. Issues, ideas, and pull requests are all welcome at <a href="https://github.com/arafatomer66/kiln-ui">github.com/arafatomer66/kiln-ui</a>.</p>
+<p>If you find it useful, a star helps the project find more contributors.</p>
+<p>Built with care in Dhaka.
+<em>যত্নে গড়ো।</em></p>
+<hr>
+<p><strong>Links</strong></p>
+<ul>
+<li>📦 npm: <a href="https://www.npmjs.com/package/kiln-ui">npmjs.com/package/kiln-ui</a></li>
+<li>🌐 Docs: <a href="https://arafatomer66.github.io/kiln-ui">arafatomer66.github.io/kiln-ui</a></li>
+<li>💻 Repo: <a href="https://github.com/arafatomer66/kiln-ui">github.com/arafatomer66/kiln-ui</a></li>
+<li>🎬 Live admin demo: <a href="https://arafatomer66.github.io/kiln-ui/showcase/admin">arafatomer66.github.io/kiln-ui/showcase/admin</a></li>
+</ul>
+
+</body>
+</html>

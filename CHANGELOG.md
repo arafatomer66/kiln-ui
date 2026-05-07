@@ -6,6 +6,40 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.4.0] — 2026-05-07
+
+### Added — 15 Pro components (56 total)
+
+Forms & data entry:
+- **Form Field** — wrapper that gives any input consistent label, hint, helper, error treatment.
+- **Time Picker** — hours + minutes input with optional 12-hour AM/PM toggle.
+- **Number Format Input** — locale-aware live formatting with prefix/suffix (currency, percentage).
+- **Color Picker** — hex input + curated swatch palette.
+- **Rating** — star input with hover preview, keyboard nav, click-same-to-clear.
+
+Display & navigation:
+- **Avatar Group** — stacked avatars with overflow ("+N").
+- **Breadcrumbs** — hierarchical trail with auto-current rendering.
+- **Page State** — 404 / 500 / maintenance / no-permission templates with corner motifs.
+
+Feedback:
+- **Loading Bar** — top-of-page progress (KnLoadingBarService).
+- **Confirm Dialog** — promise-based confirmation modals (info/warn/danger).
+
+Mobile-feel:
+- **Bottom Sheet** — slide-up modal native to mobile UX.
+- **Action Sheet** — iOS-style bottom action picker; service returns the chosen item via Promise.
+- **Pull to Refresh** — touch gesture wrapper with imperative complete().
+
+Advanced:
+- **Tour** — coachmark overlay walking users through key UI elements.
+- **Virtual Table** — same column config as KnTable but uses CDK virtual scroll for 10k+ rows.
+
+### Updated
+
+- Docs site sidebar gained a new "Pro" section (15 component pages).
+- Total components: 41 → 56.
+
 ## [0.3.3] — 2026-05-07
 
 ### Added
