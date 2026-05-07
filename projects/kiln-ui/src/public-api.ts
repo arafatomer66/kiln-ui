@@ -36,3 +36,13 @@ export * from './lib/stepper';
 export * from './lib/pagination';
 export * from './lib/date-picker';
 export * from './lib/table';
+
+// Phase D — advanced (v0.2)
+export * from './lib/skeleton';
+export * from './lib/empty-state';
+export * from './lib/otp-input';
+export * from './lib/phone-input';
+export * from './lib/combobox';
+export * from './lib/file-upload';
+export * from './lib/date-range-picker';
+export * from './lib/command-palette';

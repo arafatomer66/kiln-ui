@@ -51,6 +51,19 @@ export const COMPONENT_GROUPS: DocGroup[] = [
       { slug: 'table',       label: 'Table' },
     ],
   },
+  {
+    heading: 'Advanced',
+    items: [
+      { slug: 'skeleton',           label: 'Skeleton' },
+      { slug: 'empty-state',        label: 'Empty State' },
+      { slug: 'otp-input',          label: 'OTP Input' },
+      { slug: 'phone-input',        label: 'Phone Input' },
+      { slug: 'combobox',           label: 'Combobox' },
+      { slug: 'file-upload',        label: 'File Upload' },
+      { slug: 'date-range-picker',  label: 'Date Range Picker' },
+      { slug: 'command-palette',    label: 'Command Palette' },
+    ],
+  },
 ];
 
 export const ALL_COMPONENT_SLUGS = COMPONENT_GROUPS.flatMap((g) => g.items.map((i) => i.slug));

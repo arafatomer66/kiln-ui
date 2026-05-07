@@ -6,6 +6,24 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.2.0] — 2026-05-07
+
+### Added — 8 advanced components (35 total)
+
+- **Skeleton** — animated placeholder for loading states. Variants: text, heading, block, avatar.
+- **Empty State** — on-brand empty container with the alpana motif. Tone variants and CTA slot.
+- **OTP Input** — six-digit one-time password with auto-advance, paste support, keyboard navigation, and `autocomplete="one-time-code"` for iOS SMS auto-fill.
+- **Phone Input** — international phone with country picker. Defaults to 🇧🇩 +880; ships with 13 popular regions.
+- **Combobox** — searchable type-to-filter select with option descriptions, async loading state, and clearable selection.
+- **File Upload** — drag-and-drop uploader with multi-file support, per-file progress bars, size validation, and public progress API.
+- **Date Range Picker** — two-date picker with presets (last 7/30/90 days, this month, this year). Form-bound via CVA.
+- **Command Palette** — fuzzy-searchable ⌘K-style command launcher with grouped commands, shortcut hints, and run callbacks. Service-driven via `KnCommandPaletteService`.
+
+### Updated
+
+- Docs site: added "Advanced" section to the sidebar with 8 new component pages.
+- Total components: 27 → 35.
+
 ## [0.1.0] — 2026-05-07
 
 Initial public release.
