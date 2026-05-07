@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "kiln-ui-ng-add",
+  "title": "Kiln UI ng-add schema",
+  "type": "object",
+  "properties": {
+    "project": {
+      "type": "string",
+      "description": "Name of the Angular project to add Kiln UI to. Defaults to the workspace's default project.",
+      "$default": { "$source": "projectName" }
+    },
+    "theme": {
+      "type": "string",
+      "enum": ["light", "dark"],
+      "default": "light",
+      "description": "Initial theme for provideKilnUI()."
+    },
+    "fonts": {
+      "type": "boolean",
+      "default": true,
+      "description": "Import the bundled Google Fonts (Inter, Hind Siliguri, Fraunces, Tiro Bangla, JetBrains Mono) via fonts.css."
+    },
+    "skipPackageJson": {
+      "type": "boolean",
+      "default": false,
+      "description": "Skip adding @angular/cdk to package.json."
+    }
+  },
+  "required": []
+}

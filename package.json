@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build:schematics": "tsc -p projects/kiln-ui/schematics/tsconfig.schematics.json",
+    "build:lib": "ng build kiln-ui && npm run build:schematics && cp -R projects/kiln-ui/schematics dist/kiln-ui/"
   },
   "prettier": {
     "printWidth": 100,
@@ -34,9 +36,12 @@
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
+    "@angular-devkit/core": "^21.2.10",
+    "@angular-devkit/schematics": "^21.2.10",
     "@angular/build": "^20.3.25",
     "@angular/cli": "^20.3.8",
     "@angular/compiler-cli": "^20.3.0",
+    "@schematics/angular": "^21.2.10",
     "@types/jasmine": "~5.1.0",
     "jasmine-core": "~5.9.0",
     "karma": "~6.4.0",

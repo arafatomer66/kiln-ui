@@ -81,6 +81,31 @@ export class HelloComponent {}
 
 Full documentation at **[arafatomer66.github.io/kiln-ui](https://arafatomer66.github.io/kiln-ui)**.
 
+> **Tip:** `ng add kiln-ui` does all of the above automatically (provider, styles, fonts, CDK).
+
+---
+
+## See it in action
+
+A polished mini-CRM admin demo, built entirely from Kiln UI primitives. **[Open the live demo →](https://arafatomer66.github.io/kiln-ui/showcase/admin)**
+
+<a href="https://arafatomer66.github.io/kiln-ui/showcase/admin">
+  <img src="https://raw.githubusercontent.com/arafatomer66/kiln-ui/main/assets/preview-admin-dashboard.png" alt="Kiln UI admin dashboard" width="100%" />
+</a>
+
+<table>
+  <tr>
+    <td width="50%"><a href="https://arafatomer66.github.io/kiln-ui/showcase/admin/orders"><img src="https://raw.githubusercontent.com/arafatomer66/kiln-ui/main/assets/preview-admin-orders.png" alt="Orders page" /></a></td>
+    <td width="50%"><a href="https://arafatomer66.github.io/kiln-ui/showcase/admin/products"><img src="https://raw.githubusercontent.com/arafatomer66/kiln-ui/main/assets/preview-admin-products.png" alt="Products grid" /></a></td>
+  </tr>
+  <tr>
+    <td><a href="https://arafatomer66.github.io/kiln-ui/components/button"><img src="https://raw.githubusercontent.com/arafatomer66/kiln-ui/main/assets/preview-button-page.png" alt="Button docs" /></a></td>
+    <td><a href="https://arafatomer66.github.io/kiln-ui/components/stat-card"><img src="https://raw.githubusercontent.com/arafatomer66/kiln-ui/main/assets/preview-stat-card-page.png" alt="Stat card docs" /></a></td>
+  </tr>
+</table>
+
+Press **⌘K** / **Ctrl+K** anywhere on the docs site to try the command palette.
+
 ---
 
 ## Components

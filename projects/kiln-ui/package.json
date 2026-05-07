@@ -1,6 +1,6 @@
 {
   "name": "kiln-ui",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "An Angular component library inspired by Bangladeshi visual heritage. Standalone components, signals, dual-script typography.",
   "keywords": [
     "angular",
@@ -23,6 +23,10 @@
   },
   "bugs": {
     "url": "https://github.com/arafatomer66/kiln-ui/issues"
+  },
+  "schematics": "./schematics/collection.json",
+  "ng-add": {
+    "save": "dependencies"
   },
   "peerDependencies": {
     "@angular/common": ">=20.0.0",

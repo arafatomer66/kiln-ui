@@ -81,6 +81,31 @@ export class HelloComponent {}
 
 That's it. Full documentation at **[arafatomer66.github.io/kiln-ui](https://arafatomer66.github.io/kiln-ui)**.
 
+> **Tip:** with v0.3.3+, `ng add kiln-ui` does all of the above automatically (provider, styles, fonts, CDK).
+
+---
+
+## See it in action
+
+A polished mini-CRM admin demo, built entirely from Kiln UI primitives. **[Open the live demo →](https://arafatomer66.github.io/kiln-ui/showcase/admin)**
+
+<a href="https://arafatomer66.github.io/kiln-ui/showcase/admin">
+  <img src="./assets/preview-admin-dashboard.png" alt="Kiln UI admin dashboard — stat cards with sparklines, recent orders table, activity feed" width="100%" />
+</a>
+
+<table>
+  <tr>
+    <td width="50%"><a href="https://arafatomer66.github.io/kiln-ui/showcase/admin/orders"><img src="./assets/preview-admin-orders.png" alt="Orders page with table, filters, pagination" /></a></td>
+    <td width="50%"><a href="https://arafatomer66.github.io/kiln-ui/showcase/admin/products"><img src="./assets/preview-admin-products.png" alt="Products grid view" /></a></td>
+  </tr>
+  <tr>
+    <td><a href="https://arafatomer66.github.io/kiln-ui/components/button"><img src="./assets/preview-button-page.png" alt="Button component documentation page" /></a></td>
+    <td><a href="https://arafatomer66.github.io/kiln-ui/components/stat-card"><img src="./assets/preview-stat-card-page.png" alt="Stat card component documentation page" /></a></td>
+  </tr>
+</table>
+
+Press **⌘K** / **Ctrl+K** anywhere on the docs site to try the command palette.
+
 ---
 
 ## Components

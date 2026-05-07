@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" width="180" height="180">
+  <rect width="180" height="180" rx="22" fill="#1B3A6F"/>
+  <rect x="9" y="9" width="162" height="162" rx="18" fill="#1B3A6F" stroke="#0E1F3C" stroke-width="6"/>
+  <path d="M90 36 L138 90 L90 144 L42 90 Z" fill="#E8A33D" stroke="#FAF6EC" stroke-width="4" stroke-linejoin="round"/>
+  <circle cx="90" cy="90" r="8" fill="#FAF6EC"/>
+  <text x="90" y="160" text-anchor="middle" font-family="Georgia, serif" font-size="14" font-weight="700" fill="#FAF6EC" letter-spacing="2">KILN</text>
+</svg>

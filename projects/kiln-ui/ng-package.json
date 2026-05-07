@@ -1,7 +1,14 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
   "dest": "../../dist/kiln-ui",
-  "assets": ["./styles/**/*"],
+  "assets": [
+    "./styles/**/*",
+    {
+      "input": "./schematics/",
+      "glob": "**/*.json",
+      "output": "./schematics/"
+    }
+  ],
   "lib": {
     "entryFile": "src/public-api.ts"
   }

@@ -6,6 +6,26 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.3.3] — 2026-05-07
+
+### Added
+
+- **`ng add kiln-ui` schematic** — automated setup that wires `provideKilnUI()` into `app.config.ts`, imports global styles + fonts into `styles.scss`, and adds `@angular/cdk` to peer dependencies. One-command onboarding.
+- Custom favicon (SVG) + Apple-touch-icon for the docs site, replacing the default Angular CLI ICO.
+- OG meta tags for social-share preview cards.
+- README screenshot gallery — admin dashboard, orders, products, component pages.
+
+### Internal
+
+- Added `@angular-devkit/schematics` + `@schematics/angular` as dev deps for the schematic.
+- Release workflow now uses `npm run build:lib` (which compiles + bundles schematics) instead of just `ng build`.
+
+## [0.3.2] — 2026-05-07
+
+### Fixed
+
+- npm-page README — replaced the auto-generated "KilnUi · This project was generated using Angular CLI" stub with the proper hero (banner, badges, quickstart, components list, theming, author bio). Image and license links use absolute URLs so they render on npmjs.com.
+
 ## [0.3.1] — 2026-05-07
 
 ### Changed
