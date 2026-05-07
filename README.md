@@ -105,7 +105,7 @@ Each component has its own documentation page with live examples, copy-paste cod
 
 ## Why I built this
 
-I'm Omer — a Dhaka-based founder and engineer building consumer products for emerging markets. After shipping a few Angular dashboards for [ShareDeal](https://github.com/arafatomer66) and clients in Bangladesh's RMG sector, I wanted a component library that:
+I'm Omer — a Dhaka-based engineer building consumer products for emerging markets. After shipping a number of Angular dashboards for clients across Bangladesh's RMG and SaaS sectors, I wanted a component library that:
 
 1. **Felt rooted somewhere.** Most "neutral" design systems are anything but — they carry a Silicon Valley aesthetic baked into every shadow and corner radius. Kiln UI is openly, deliberately Bangladeshi.
 2. **Used modern Angular properly.** Signals, `inject()`, standalone components, `ControlValueAccessor` for form integration, `@angular/cdk` for overlays. No NgModules, no decorator-based DI fallbacks, no compromise.
@@ -151,7 +151,7 @@ If you find Kiln UI useful, please consider [starring on GitHub](https://github.
 ## Author
 
 **Omer Arafat** · Dhaka, Bangladesh
-Founder · ShareDeal · long-time Angular and Flutter engineer.
+Long-time Angular and Flutter engineer building products for emerging-market consumers.
 
 - GitHub: [@arafatomer66](https://github.com/arafatomer66)
 - Email: [sharedealnow@gmail.com](mailto:sharedealnow@gmail.com)

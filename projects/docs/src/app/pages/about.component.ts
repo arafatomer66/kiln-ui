@@ -36,9 +36,8 @@ import { PageHeaderComponent } from '../shared/page-header.component';
 
     <h2>The author</h2>
     <p>
-      Built by <strong>Omer Arafat</strong> in Dhaka, Bangladesh.
-      Founder at <a href="https://github.com/arafatomer66/sharedeal-app" target="_blank" rel="noreferrer">ShareDeal</a> — a community-powered group buying platform —
-      and a long-time builder of Angular and Flutter products for emerging-market consumers.
+      Built by <strong>Omer Arafat</strong> in Dhaka, Bangladesh —
+      a long-time builder of Angular and Flutter products for emerging-market consumers.
     </p>
 
     <p>

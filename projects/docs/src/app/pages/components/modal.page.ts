@@ -11,7 +11,7 @@ import { CodeBlockComponent } from '../../shared/code-block.component';
   imports: [KnModalComponent, KnModalFooterComponent, KnButtonComponent],
   template: `
     <kn-modal title="Delete project">
-      <p>This will permanently remove "ShareDeal v2" and its 47 tasks. This cannot be undone.</p>
+      <p>This will permanently remove the project and its 47 tasks. This cannot be undone.</p>
       <kn-modal-footer>
         <kn-button variant="outline" size="sm" (clicked)="cancel()">Cancel</kn-button>
         <kn-button variant="solid" tone="danger" size="sm" (clicked)="confirm()">Delete project</kn-button>

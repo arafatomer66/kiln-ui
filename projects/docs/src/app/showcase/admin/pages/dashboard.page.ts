@@ -37,7 +37,7 @@ interface Stat {
       <div>
         <div class="page-head__eyebrow">DASHBOARD · ড্যাশবোর্ড</div>
         <h1 class="page-head__title">Good morning, Omer.</h1>
-        <p class="page-head__sub">Here's what's happened on ShareDeal in the last 24 hours.</p>
+        <p class="page-head__sub">Here's what's happened on your workspace in the last 24 hours.</p>
       </div>
       <div class="page-head__cta">
         <div class="page-head__period">

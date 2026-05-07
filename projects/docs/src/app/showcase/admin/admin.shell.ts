@@ -31,8 +31,8 @@ interface NavSection { heading: string; items: NavItem[]; }
           <span class="admin__brand-glyph">❖</span>
           @if (!collapsed()) {
             <span class="admin__brand-text">
-              <span class="admin__brand-en">ShareDeal</span>
-              <span class="admin__brand-bn">শেয়ারডিল</span>
+              <span class="admin__brand-en">Kiln Admin</span>
+              <span class="admin__brand-bn">কিলন অ্যাডমিন</span>
             </span>
           }
         </div>

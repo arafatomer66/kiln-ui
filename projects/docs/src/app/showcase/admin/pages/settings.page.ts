@@ -257,7 +257,7 @@ export class SettingsPage {
   protected readonly Math = Math;
 
   protected readonly name = new FormControl('Omer Arafat');
-  protected readonly email = new FormControl('omer@sharedeal.app');
+  protected readonly email = new FormControl('omer@example.com');
 
   protected readonly timezone = signal<string>('Asia/Dhaka');
   protected readonly notifyOrder = signal(true);
