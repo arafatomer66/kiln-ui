@@ -1,63 +1,175 @@
-# KilnUi
+<div align="center">
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.0.
+<img src="https://raw.githubusercontent.com/arafatomer66/kiln-ui/main/assets/banner.svg" alt="Kiln UI — কিলন" width="100%" />
 
-## Code scaffolding
+# Kiln UI · কিলন
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+**An Angular component library inspired by Bangladeshi visual heritage.**
 
-```bash
-ng generate component component-name
-```
+Standalone components · Signal-based APIs · Dual-script typography · **41 polished components**.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+[![npm](https://img.shields.io/npm/v/kiln-ui.svg?label=npm&color=1B3A6F)](https://www.npmjs.com/package/kiln-ui)
+[![license](https://img.shields.io/badge/license-MIT-1B3A6F)](https://github.com/arafatomer66/kiln-ui/blob/main/LICENSE)
+[![Angular](https://img.shields.io/badge/Angular-20%2B-1B3A6F)](https://angular.dev)
+[![Made in Dhaka](https://img.shields.io/badge/Made%20in-Dhaka%20%F0%9F%87%A7%F0%9F%87%A9-E8A33D)](https://github.com/arafatomer66)
 
-```bash
-ng generate --help
-```
+[**Documentation**](https://arafatomer66.github.io/kiln-ui) · [**Components**](https://arafatomer66.github.io/kiln-ui/components/button) · [**Theming**](https://arafatomer66.github.io/kiln-ui/theming) · [**Admin demo**](https://arafatomer66.github.io/kiln-ui/showcase/admin) · [**GitHub**](https://github.com/arafatomer66/kiln-ui)
 
-## Building
+</div>
 
-To build the library, run:
+---
 
-```bash
-ng build kiln-ui
-```
+## Why Kiln UI?
 
-This command will compile your project, and the build artifacts will be placed in the `dist/` directory.
+Most Angular component libraries feel placeless — generic Material clones styled in grey-and-blue. **Kiln UI** is an experiment in building tooling with a sense of place: a design language rooted in **Bangladeshi visual heritage**, but engineered with the modern Angular patterns developers expect today.
 
-### Publishing the Library
+Three motifs anchor the system:
 
-Once the project is built, you can publish your library by following these steps:
+- **Jute** — warm neutrals drawn from the country's iconic export.
+- **Nokshi kantha** — geometric corner glyphs (`❖`) and *alpana* dividers, the embroidered patterns of stitched quilts.
+- **Dual-script type** — Latin and Bangla pairings (Inter × Hind Siliguri, Fraunces × Tiro Bangla) with matched x-heights.
 
-1. Navigate to the `dist` directory:
-   ```bash
-   cd dist/kiln-ui
-   ```
+Sharp 4px corners. Stamp shadow with no blur. Vibrant indigo and marigold accents. **Zero compromise on accessibility, type safety, or modern Angular idioms.**
 
-2. Run the `npm publish` command to publish your library to the npm registry:
-   ```bash
-   npm publish
-   ```
+---
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## 30-second quickstart
 
 ```bash
-ng test
+npm install kiln-ui @angular/cdk
 ```
 
-## Running end-to-end tests
+Register the provider in `app.config.ts`:
 
-For end-to-end (e2e) testing, run:
+```ts
+import { ApplicationConfig } from '@angular/core';
+import { provideKilnUI } from 'kiln-ui';
 
-```bash
-ng e2e
+export const appConfig: ApplicationConfig = {
+  providers: [
+    provideKilnUI({ theme: 'light' }),
+  ],
+};
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Import the global styles in `src/styles.scss`:
 
-## Additional Resources
+```scss
+@use 'kiln-ui/styles/all' as *;
+@use 'kiln-ui/styles/fonts.css';
+```
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Use a component:
+
+```ts
+import { Component } from '@angular/core';
+import { KnButtonComponent, KnCardComponent } from 'kiln-ui';
+
+@Component({
+  selector: 'app-hello',
+  standalone: true,
+  imports: [KnButtonComponent, KnCardComponent],
+  template: `
+    <kn-card>
+      <h2>Welcome to Kiln UI</h2>
+      <kn-button variant="solid">Get started →</kn-button>
+    </kn-card>
+  `,
+})
+export class HelloComponent {}
+```
+
+Full documentation at **[arafatomer66.github.io/kiln-ui](https://arafatomer66.github.io/kiln-ui)**.
+
+---
+
+## Components
+
+All 41 components are **standalone**, **signal-based**, **OnPush by default**, and ship with full ARIA support.
+
+### Foundation (14)
+Button · Input · Textarea · Checkbox · Radio · Switch · Badge · Chip · Avatar · Spinner · Progress · Divider · Card · Alert
+
+### Overlay (7)
+Tooltip · Dropdown · Menu · Select · Modal · Drawer · Toast
+
+### Composite (6)
+Tabs · Accordion · Stepper · Pagination · Date Picker · Table
+
+### Advanced (8)
+Skeleton · Empty State · OTP Input · Phone Input · Combobox · File Upload · Date Range Picker · Command Palette
+
+### Extended (6)
+Sparkline · Stat Card · Slider · Tag Input · Tree · Calendar
+
+Each component has its own documentation page with live examples, copy-paste code, an API reference table, and accessibility notes — see the [docs site](https://arafatomer66.github.io/kiln-ui).
+
+There's also a [**live admin demo**](https://arafatomer66.github.io/kiln-ui/showcase/admin) — a realistic mini-CRM built entirely from Kiln UI primitives, showing 22+ components in real usage. Press `⌘K` / `Ctrl+K` from the docs site to try the command palette.
+
+---
+
+## Theming
+
+Every visual decision is exposed as a **CSS custom property** prefixed with `--kn-`. Override per-instance, per-section, or app-wide.
+
+```scss
+:root {
+  --kn-brand: #0f5132;
+  --kn-brand-strong: #093d22;
+  --kn-accent: #ffd166;
+}
+```
+
+Dark mode is built in — toggle with the `KnThemeService` or set `data-kn-theme="dark"` on `<html>`.
+
+---
+
+## Why I built this
+
+I'm Omer — a Dhaka-based engineer building consumer products for emerging markets. After shipping a number of Angular dashboards for clients across Bangladesh's RMG and SaaS sectors, I wanted a component library that:
+
+1. **Felt rooted somewhere.** Most "neutral" design systems are anything but — they carry a Silicon Valley aesthetic baked into every shadow and corner radius. Kiln UI is openly, deliberately Bangladeshi.
+2. **Used modern Angular properly.** Signals, `inject()`, standalone components, `ControlValueAccessor` for form integration, `@angular/cdk` for overlays. No NgModules, no decorator-based DI fallbacks, no compromise.
+3. **Came with documentation that respects the reader.** Every component page has at least 3 working examples, an API table, and accessibility notes — same quality bar as Material or PrimeNG.
+
+If any of that resonates, I'd love your feedback or contribution.
+
+---
+
+## Roadmap
+
+- **v0.1** — Foundation, overlay, and composite components (27).
+- **v0.2** — Advanced set (8): OTP, phone, combobox, file upload, date range, command palette, skeleton, empty state.
+- **v0.3** — Extended set (6): sparkline, stat card, slider, tag input, tree, calendar. **(You are here.)**
+- **v0.4** — Schematics (`ng add kiln-ui`), virtual-scroll table.
+- **v1.0** — Stable API, full a11y audit, comprehensive Bangla locale, plugin packages (`kiln-charts`, `kiln-editor`).
+
+---
+
+## Contributing
+
+Issues, feature requests, and pull requests are warmly welcomed. See [CONTRIBUTING.md](https://github.com/arafatomer66/kiln-ui/blob/main/CONTRIBUTING.md) for setup, code style, and how to add a new component.
+
+If you find Kiln UI useful, please consider [starring on GitHub](https://github.com/arafatomer66/kiln-ui) — it genuinely helps the project find more contributors.
+
+---
+
+## Author
+
+**Omer Arafat** · Dhaka, Bangladesh
+Long-time Angular and Flutter engineer building products for emerging-market consumers.
+
+- GitHub: [@arafatomer66](https://github.com/arafatomer66)
+- Email: [arafatomer66@gmail.com](mailto:arafatomer66@gmail.com)
+
+---
+
+## License
+
+MIT — see [LICENSE](https://github.com/arafatomer66/kiln-ui/blob/main/LICENSE).
+
+<div align="center">
+
+<sub>Built with care in Dhaka. <i>যত্নে গড়ো।</i></sub>
+
+</div>
