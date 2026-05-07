@@ -1,0 +1,86 @@
+@use '../../../styles/motifs' as *;
+
+:host {
+  display: block;
+  font-family: var(--kn-font-sans);
+}
+
+.kn-field__label {
+  @include kn-label-mono;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  color: var(--kn-text);
+  margin-bottom: var(--kn-sp-2);
+
+  &__hint {
+    color: var(--kn-text-muted);
+    font-weight: var(--kn-fw-regular);
+  }
+}
+
+.kn-field__wrap {
+  display: flex;
+  align-items: stretch;
+  background: var(--kn-bg);
+  border: var(--kn-bw-2) solid var(--kn-border-strong);
+  border-radius: var(--kn-r-sm);
+  transition: border-color var(--kn-dur-fast) var(--kn-ease), box-shadow var(--kn-dur-fast) var(--kn-ease);
+  overflow: hidden;
+
+  &:has(input:focus-visible),
+  &:has(textarea:focus-visible) {
+    box-shadow: var(--kn-ring);
+  }
+}
+
+:host([data-invalid='true']) .kn-field__wrap { border-color: var(--kn-danger); }
+:host([data-disabled='true']) .kn-field__wrap { opacity: 0.6; }
+
+.kn-field__input {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  height: 36px;
+  padding: 0 var(--kn-sp-3);
+  background: transparent;
+  color: var(--kn-text);
+  font-family: inherit;
+  font-size: var(--kn-fs-base);
+  border: none;
+  outline: none;
+
+  &::placeholder { color: var(--kn-text-muted); opacity: 0.7; }
+
+  &:disabled { cursor: not-allowed; }
+}
+
+:host([data-size='sm']) .kn-field__input { height: 28px; font-size: var(--kn-fs-sm); }
+:host([data-size='lg']) .kn-field__input { height: 44px; font-size: var(--kn-fs-md); }
+
+.kn-field__addon {
+  display: flex;
+  align-items: center;
+  padding: 0 var(--kn-sp-3);
+  background: var(--kn-surface);
+  color: var(--kn-text-muted);
+  border-right: var(--kn-bw-1) solid var(--kn-border);
+
+  &--suffix {
+    border-right: none;
+    border-left: var(--kn-bw-1) solid var(--kn-border);
+  }
+}
+
+.kn-field__helper {
+  margin-top: var(--kn-sp-2);
+  font-size: var(--kn-fs-sm);
+  color: var(--kn-text-muted);
+
+  &--error { color: var(--kn-danger); }
+
+  &__icon {
+    margin-right: var(--kn-sp-1);
+    font-weight: var(--kn-fw-bold);
+  }
+}

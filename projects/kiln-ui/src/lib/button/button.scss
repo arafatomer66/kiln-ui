@@ -1,0 +1,131 @@
+@use '../../../styles/motifs' as *;
+
+:host {
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+.kn-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--kn-sp-2);
+  font-family: var(--kn-font-sans);
+  font-weight: var(--kn-fw-semibold);
+  letter-spacing: var(--kn-tracking-tight);
+  border-radius: var(--kn-r-sm);
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    transform var(--kn-dur-fast) var(--kn-ease),
+    box-shadow var(--kn-dur-fast) var(--kn-ease),
+    background-color var(--kn-dur-fast) var(--kn-ease),
+    color var(--kn-dur-fast) var(--kn-ease);
+
+  &:focus-visible {
+    @include kn-focus-ring;
+  }
+
+  &[disabled],
+  &[aria-busy='true'] {
+    cursor: not-allowed;
+    opacity: 0.6;
+    pointer-events: none;
+  }
+}
+
+// ─── Sizes ──────────────────────────────────────────────────
+:host([data-size='sm']) .kn-button {
+  height: 28px;
+  padding: 0 var(--kn-sp-3);
+  font-size: var(--kn-fs-sm);
+}
+
+:host([data-size='md']) .kn-button {
+  height: 36px;
+  padding: 0 var(--kn-sp-4);
+  font-size: var(--kn-fs-base);
+}
+
+:host([data-size='lg']) .kn-button {
+  height: 44px;
+  padding: 0 var(--kn-sp-5);
+  font-size: var(--kn-fs-md);
+}
+
+// ─── Variants ───────────────────────────────────────────────
+:host([data-variant='solid']) .kn-button {
+  background: var(--kn-brand);
+  color: var(--kn-text-inverse);
+  border: var(--kn-bw-2) solid var(--kn-brand);
+  box-shadow: 3px 3px 0 var(--kn-brand-strong);
+
+  &:hover { transform: translate(-1px, -1px); box-shadow: 4px 4px 0 var(--kn-brand-strong); }
+  &:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--kn-brand-strong); }
+}
+
+:host([data-variant='outline']) .kn-button {
+  background: var(--kn-surface);
+  color: var(--kn-text);
+  border: var(--kn-bw-2) solid var(--kn-border-strong);
+  box-shadow: var(--kn-shadow-stamp);
+
+  &:hover { @include kn-stamp-hover; }
+  &:active { @include kn-stamp-pressed; }
+}
+
+:host([data-variant='ghost']) .kn-button {
+  background: transparent;
+  color: var(--kn-text);
+  border: var(--kn-bw-2) solid transparent;
+
+  &:hover { background: var(--kn-surface); }
+  &:active { background: var(--kn-surface-alt); }
+}
+
+:host([data-variant='link']) .kn-button {
+  background: transparent;
+  color: var(--kn-brand);
+  border: none;
+  height: auto;
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+
+  &:hover { text-decoration-thickness: 2px; }
+}
+
+:host([data-tone='danger'][data-variant='solid']) .kn-button {
+  --kn-brand: var(--kn-danger);
+  --kn-brand-strong: #7A2010;
+}
+
+:host([data-tone='accent'][data-variant='solid']) .kn-button {
+  --kn-brand: var(--kn-accent);
+  --kn-brand-strong: var(--kn-accent-strong);
+  color: var(--kn-jute-900);
+}
+
+// ─── Loading state ──────────────────────────────────────────
+.kn-button__spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: kn-spin 600ms linear infinite;
+}
+
+@keyframes kn-spin {
+  to { transform: rotate(360deg); }
+}
+
+// ─── Block layout ───────────────────────────────────────────
+:host([data-block='true']) {
+  display: flex;
+  width: 100%;
+
+  .kn-button { width: 100%; }
+}

@@ -1,0 +1,30 @@
+// Dark theme — applied via [data-kn-theme="dark"] on <html> or any wrapper.
+[data-kn-theme='dark'] {
+  --kn-bg:           #1A1810;
+  --kn-surface:      #25221A;
+  --kn-surface-alt:  #2F2B22;
+  --kn-border:       #3D3829;
+  --kn-border-strong: var(--kn-jute-100);
+  --kn-text:         var(--kn-jute-50);
+  --kn-text-muted:   var(--kn-jute-300);
+  --kn-text-inverse: var(--kn-jute-900);
+
+  --kn-brand:        var(--kn-marigold-500);
+  --kn-brand-strong: var(--kn-marigold-600);
+  --kn-accent:       var(--kn-indigo-300);
+  --kn-accent-strong: var(--kn-indigo-500);
+  --kn-focus-ring:   var(--kn-marigold-500);
+
+  --kn-success-bg: #1F3A2C;
+  --kn-danger-bg:  #3A201A;
+  --kn-warn-bg:    #3A2C18;
+  --kn-info-bg:    #1F2840;
+
+  --kn-shadow-stamp:        3px 3px 0 #000000;
+  --kn-shadow-stamp-strong: 4px 4px 0 #000000;
+  --kn-shadow-soft:         0 2px 8px rgba(0, 0, 0, 0.4);
+  --kn-shadow-soft-md:      0 4px 16px rgba(0, 0, 0, 0.5);
+  --kn-shadow-soft-lg:      0 8px 32px rgba(0, 0, 0, 0.6);
+
+  --kn-ring: 0 0 0 3px rgba(232, 163, 61, 0.30);
+}

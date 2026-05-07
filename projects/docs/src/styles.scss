@@ -1,0 +1,16 @@
+@use '../../kiln-ui/styles/all' as *;
+@use '../../kiln-ui/styles/fonts.css';
+
+body {
+  margin: 0;
+  font-family: var(--kn-font-sans);
+  background: var(--kn-bg);
+  color: var(--kn-text);
+}
+
+a { color: var(--kn-brand); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+code, pre {
+  font-family: var(--kn-font-mono);
+}

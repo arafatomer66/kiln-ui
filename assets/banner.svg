@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 320" width="1280" height="320">
+  <defs>
+    <pattern id="alpana" x="0" y="0" width="80" height="20" patternUnits="userSpaceOnUse">
+      <path d="M0 10 L20 4 L40 16 L60 4 L80 10" fill="none" stroke="#1B3A6F" stroke-width="1.2" opacity="0.35"/>
+    </pattern>
+  </defs>
+  <rect width="1280" height="320" fill="#FAF6EC"/>
+  <rect width="1280" height="320" fill="url(#alpana)"/>
+  <rect x="60" y="60" width="1160" height="200" fill="#F1E9D5" stroke="#2A2418" stroke-width="2.5"/>
+  <rect x="63" y="63" width="1160" height="200" fill="none" stroke="#D4C5A0" stroke-width="2"/>
+  <text x="60" y="60" font-size="28" fill="#1B3A6F">❖</text>
+  <text x="1216" y="60" font-size="28" fill="#1B3A6F">❖</text>
+  <text x="60" y="276" font-size="28" fill="#1B3A6F">❖</text>
+  <text x="1216" y="276" font-size="28" fill="#1B3A6F">❖</text>
+
+  <g transform="translate(120, 130)">
+    <text font-family="Georgia, serif" font-size="76" font-weight="700" fill="#2A2418" letter-spacing="-2">কিলন · Kiln UI</text>
+    <text y="48" font-family="Georgia, serif" font-size="22" font-style="italic" fill="#6B5B3E">An Angular component library inspired by Bangladeshi visual heritage.</text>
+    <text y="78" font-family="ui-monospace, monospace" font-size="13" letter-spacing="3" fill="#1B3A6F">DESIGN SYSTEM · STANDALONE COMPONENTS · DUAL-SCRIPT TYPOGRAPHY</text>
+  </g>
+
+  <g transform="translate(60, 290)">
+    <path d="M0 10 L60 0 L120 20 L180 0 L240 20 L300 0 L360 20 L420 0 L480 20 L540 0 L600 20 L660 0 L720 20 L780 0 L840 20 L900 0 L960 20 L1020 0 L1080 20 L1140 0 L1160 10" fill="none" stroke="#1B3A6F" stroke-width="2"/>
+  </g>
+</svg>

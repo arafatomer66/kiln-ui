@@ -6,6 +6,11 @@
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
+    "paths": {
+      "kiln-ui": [
+        "./dist/kiln-ui"
+      ]
+    },
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
@@ -22,5 +27,19 @@
     "typeCheckHostBindings": true,
     "strictTemplates": true
   },
-  "files": []
+  "files": [],
+  "references": [
+    {
+      "path": "./projects/kiln-ui/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/kiln-ui/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/docs/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/docs/tsconfig.spec.json"
+    }
+  ]
 }

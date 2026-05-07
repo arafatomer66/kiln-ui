@@ -1,0 +1,32 @@
+// Kiln UI — minimal base reset (scoped to kn-* prefix where possible).
+// Apps opt-in by importing 'kiln-ui/styles/all.scss' or 'kiln-ui/styles/base.scss'.
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  font-family: var(--kn-font-sans);
+  font-size: var(--kn-fs-base);
+  line-height: var(--kn-lh-normal);
+  color: var(--kn-text);
+  background: var(--kn-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  font-family: inherit;
+  color: inherit;
+  background: inherit;
+}
+
+// Honor reduced-motion preference globally.
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

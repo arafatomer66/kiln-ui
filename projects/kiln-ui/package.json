@@ -1,0 +1,36 @@
+{
+  "name": "@kiln/ui",
+  "version": "0.1.0",
+  "description": "An Angular component library inspired by Bangladeshi visual heritage. Standalone components, signals, dual-script typography.",
+  "keywords": [
+    "angular",
+    "angular-components",
+    "ui-library",
+    "design-system",
+    "bangla",
+    "bangladesh",
+    "signals",
+    "standalone-components",
+    "typescript",
+    "scss"
+  ],
+  "author": "Omer Arafat <sharedealnow@gmail.com> (https://github.com/arafatomer66)",
+  "license": "MIT",
+  "homepage": "https://arafatomer66.github.io/kiln-ui",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arafatomer66/kiln-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arafatomer66/kiln-ui/issues"
+  },
+  "peerDependencies": {
+    "@angular/common": ">=20.0.0",
+    "@angular/core": ">=20.0.0",
+    "@angular/cdk": ">=20.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false
+}

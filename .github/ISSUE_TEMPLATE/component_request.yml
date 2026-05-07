@@ -1,0 +1,29 @@
+name: 🧩 New component request
+description: Propose a new component for Kiln UI.
+title: "[component] "
+labels: ["new component", "triage"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Component name
+      placeholder: "e.g. TimePicker, Slider, FileUpload"
+    validations:
+      required: true
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use case
+      description: What problem does this component solve? Where would you use it?
+    validations:
+      required: true
+  - type: textarea
+    id: prior-art
+    attributes:
+      label: Prior art
+      description: Examples from Material, PrimeNG, Radix, Headless UI, etc.
+  - type: textarea
+    id: api
+    attributes:
+      label: Proposed API sketch
+      description: Inputs, outputs, slots — even rough.

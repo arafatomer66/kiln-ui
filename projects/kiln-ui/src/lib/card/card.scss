@@ -1,0 +1,77 @@
+:host {
+  display: block;
+  font-family: var(--kn-font-sans);
+  position: relative;
+}
+
+.kn-card {
+  position: relative;
+  background: var(--kn-surface);
+  border: var(--kn-bw-2) solid var(--kn-border-strong);
+  border-radius: var(--kn-r-sm);
+  box-shadow: var(--kn-shadow-stamp);
+  padding: var(--kn-sp-6);
+  color: var(--kn-text);
+}
+
+:host([data-variant='soft']) .kn-card {
+  background: var(--kn-bg);
+  border-color: var(--kn-border);
+  border-width: var(--kn-bw-1);
+  box-shadow: var(--kn-shadow-soft);
+}
+
+:host([data-variant='ghost']) .kn-card {
+  background: transparent;
+  border: var(--kn-bw-1) dashed var(--kn-border);
+  box-shadow: none;
+}
+
+:host([data-padding='none']) .kn-card { padding: 0; }
+:host([data-padding='sm'])   .kn-card { padding: var(--kn-sp-4); }
+:host([data-padding='lg'])   .kn-card { padding: var(--kn-sp-9); }
+
+:host([data-interactive='true']) .kn-card {
+  cursor: pointer;
+  transition:
+    transform var(--kn-dur-fast) var(--kn-ease),
+    box-shadow var(--kn-dur-fast) var(--kn-ease);
+
+  &:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px 0 var(--kn-jute-300);
+  }
+}
+
+// Corner motifs
+.kn-card__motif {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  color: var(--kn-brand);
+  font-size: 14px;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.kn-card__motif--tl { top: -6px; left: -6px; }
+.kn-card__motif--tr { top: -6px; right: -6px; }
+.kn-card__motif--bl { bottom: -6px; left: -6px; }
+.kn-card__motif--br { bottom: -6px; right: -6px; }
+
+:host([data-motifs='false']) .kn-card__motif { display: none; }
+
+// Optional structural slots — header/body/footer
+::ng-deep kn-card-header {
+  display: block;
+  margin: calc(var(--kn-sp-6) * -1) calc(var(--kn-sp-6) * -1) var(--kn-sp-4);
+  padding: var(--kn-sp-4) var(--kn-sp-6);
+  border-bottom: var(--kn-bw-1) solid var(--kn-border);
+}
+
+::ng-deep kn-card-footer {
+  display: block;
+  margin: var(--kn-sp-4) calc(var(--kn-sp-6) * -1) calc(var(--kn-sp-6) * -1);
+  padding: var(--kn-sp-4) var(--kn-sp-6);
+  border-top: var(--kn-bw-1) solid var(--kn-border);
+}

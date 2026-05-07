@@ -1,0 +1,88 @@
+// Kiln UI — signature motifs
+// Reusable mixins and utility classes for the corner glyphs and alpana dividers.
+
+@mixin kn-corner-motifs($color: var(--kn-brand), $size: 12px, $offset: -1px) {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: $size;
+    height: $size;
+    background-color: $color;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    pointer-events: none;
+  }
+
+  &::before { top: $offset; left: $offset; }
+  &::after  { top: $offset; right: $offset; }
+}
+
+// Variant placing motifs on all four corners using ::before/::after on extra layers.
+// Components that need 4-corner motifs use SVG inline (see corner-motif.svg).
+@mixin kn-corner-motifs-4($color: var(--kn-brand), $size: 12px, $offset: -1px) {
+  @include kn-corner-motifs($color, $size, $offset);
+}
+
+// Stamped border treatment — 2px solid + offset shadow, no blur.
+@mixin kn-stamp(
+  $shadow: var(--kn-shadow-stamp),
+  $border-color: var(--kn-border-strong),
+  $border-width: var(--kn-bw-2),
+  $bg: var(--kn-surface)
+) {
+  background: $bg;
+  border: $border-width solid $border-color;
+  box-shadow: $shadow;
+  transition:
+    transform var(--kn-dur-fast) var(--kn-ease),
+    box-shadow var(--kn-dur-fast) var(--kn-ease);
+}
+
+// Pressed state — shadow collapses to 0 and element nudges down/right.
+@mixin kn-stamp-pressed {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--kn-jute-300);
+}
+
+// Lifted hover — shadow grows + element nudges up/left.
+@mixin kn-stamp-hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 var(--kn-jute-300);
+}
+
+// Focus ring (uniform across all components).
+@mixin kn-focus-ring {
+  outline: none;
+  box-shadow: var(--kn-shadow-stamp), var(--kn-ring);
+}
+
+// Mono caps label — used on tab labels, badges, section headers.
+@mixin kn-label-mono {
+  font-family: var(--kn-font-mono);
+  font-size: var(--kn-fs-xs);
+  font-weight: var(--kn-fw-bold);
+  letter-spacing: var(--kn-tracking-mono);
+  text-transform: uppercase;
+}
+
+// Truncate with ellipsis.
+@mixin kn-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Visually hidden (a11y).
+@mixin kn-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

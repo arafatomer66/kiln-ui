@@ -1,0 +1,137 @@
+// Kiln UI — design tokens
+// Neo-Native palette: jute neutrals + indigo brand + marigold accent.
+// All tokens exposed as CSS custom properties so apps can override per-instance.
+
+:root {
+  // ─── Jute neutrals ─────────────────────────────────────────
+  --kn-jute-50:  #FAF6EC;
+  --kn-jute-100: #F1E9D5;
+  --kn-jute-200: #E4D5B0;
+  --kn-jute-300: #D4C5A0;
+  --kn-jute-400: #B5A47A;
+  --kn-jute-500: #948465;
+  --kn-jute-700: #6B5B3E;
+  --kn-jute-900: #2A2418;
+
+  // ─── Indigo brand ──────────────────────────────────────────
+  --kn-indigo-50:  #EAF0F9;
+  --kn-indigo-100: #C7D6EB;
+  --kn-indigo-300: #6B8AB8;
+  --kn-indigo-500: #1B3A6F;
+  --kn-indigo-600: #142D57;
+  --kn-indigo-700: #0E1F3C;
+
+  // ─── Marigold accent ───────────────────────────────────────
+  --kn-marigold-100: #FBE9C7;
+  --kn-marigold-300: #F4C674;
+  --kn-marigold-500: #E8A33D;
+  --kn-marigold-600: #C8861E;
+  --kn-marigold-700: #9F660A;
+
+  // ─── Semantic colors ───────────────────────────────────────
+  --kn-success: #2D6A4F;
+  --kn-success-bg: #DDEEE3;
+  --kn-danger:  #B5371F;
+  --kn-danger-bg: #F5DDD7;
+  --kn-warn:    #C8861E;
+  --kn-warn-bg: #FBE9C7;
+  --kn-info:    #1B3A6F;
+  --kn-info-bg: #EAF0F9;
+
+  // ─── Surface roles (light theme defaults) ──────────────────
+  --kn-bg:           var(--kn-jute-50);
+  --kn-surface:      var(--kn-jute-100);
+  --kn-surface-alt:  var(--kn-jute-200);
+  --kn-border:       var(--kn-jute-300);
+  --kn-border-strong: var(--kn-jute-900);
+  --kn-text:         var(--kn-jute-900);
+  --kn-text-muted:   var(--kn-jute-700);
+  --kn-text-inverse: var(--kn-jute-50);
+  --kn-brand:        var(--kn-indigo-500);
+  --kn-brand-strong: var(--kn-indigo-600);
+  --kn-accent:       var(--kn-marigold-500);
+  --kn-accent-strong: var(--kn-marigold-600);
+  --kn-focus-ring:   var(--kn-indigo-500);
+
+  // ─── Typography ────────────────────────────────────────────
+  --kn-font-sans: 'Inter', 'Hind Siliguri', system-ui, -apple-system, sans-serif;
+  --kn-font-display: 'Fraunces', 'Tiro Bangla', Georgia, serif;
+  --kn-font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
+
+  --kn-fs-xs:   11px;
+  --kn-fs-sm:   12px;
+  --kn-fs-base: 14px;
+  --kn-fs-md:   15px;
+  --kn-fs-lg:   17px;
+  --kn-fs-xl:   20px;
+  --kn-fs-2xl:  24px;
+  --kn-fs-3xl:  32px;
+  --kn-fs-4xl:  44px;
+  --kn-fs-5xl:  56px;
+
+  --kn-fw-regular: 400;
+  --kn-fw-medium: 500;
+  --kn-fw-semibold: 600;
+  --kn-fw-bold: 700;
+
+  --kn-lh-tight: 1.2;
+  --kn-lh-normal: 1.5;
+  --kn-lh-relaxed: 1.7;
+
+  --kn-tracking-tight: -0.01em;
+  --kn-tracking-normal: 0;
+  --kn-tracking-wide: 0.04em;
+  --kn-tracking-mono: 0.08em;
+
+  // ─── Spacing (4px grid) ────────────────────────────────────
+  --kn-sp-1: 4px;
+  --kn-sp-2: 8px;
+  --kn-sp-3: 12px;
+  --kn-sp-4: 16px;
+  --kn-sp-5: 20px;
+  --kn-sp-6: 24px;
+  --kn-sp-7: 32px;
+  --kn-sp-8: 40px;
+  --kn-sp-9: 48px;
+  --kn-sp-10: 64px;
+  --kn-sp-11: 80px;
+  --kn-sp-12: 96px;
+
+  // ─── Radius (sharp by default) ─────────────────────────────
+  --kn-r-none: 0;
+  --kn-r-xs:   2px;
+  --kn-r-sm:   4px;
+  --kn-r-md:   6px;
+  --kn-r-lg:   8px;
+  --kn-r-pill: 999px;
+
+  // ─── Shadows (signature: stamp shadow, no blur) ────────────
+  --kn-shadow-stamp:   3px 3px 0 var(--kn-jute-300);
+  --kn-shadow-stamp-strong: 4px 4px 0 var(--kn-jute-900);
+  --kn-shadow-soft:    0 2px 8px rgba(42, 36, 24, 0.08);
+  --kn-shadow-soft-md: 0 4px 16px rgba(42, 36, 24, 0.10);
+  --kn-shadow-soft-lg: 0 8px 32px rgba(42, 36, 24, 0.14);
+
+  // ─── Borders ───────────────────────────────────────────────
+  --kn-bw-1: 1px;
+  --kn-bw-2: 2px;
+  --kn-bw-3: 3px;
+
+  // ─── Z-index scale ─────────────────────────────────────────
+  --kn-z-base: 0;
+  --kn-z-dropdown: 100;
+  --kn-z-sticky: 200;
+  --kn-z-overlay: 1000;
+  --kn-z-modal: 1100;
+  --kn-z-toast: 1200;
+  --kn-z-tooltip: 1300;
+
+  // ─── Motion ────────────────────────────────────────────────
+  --kn-dur-fast: 120ms;
+  --kn-dur-normal: 200ms;
+  --kn-dur-slow: 320ms;
+  --kn-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+
+  // ─── Focus ring ────────────────────────────────────────────
+  --kn-ring: 0 0 0 3px rgba(27, 58, 111, 0.25);
+}
