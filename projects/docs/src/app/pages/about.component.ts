@@ -46,7 +46,7 @@ import { PageHeaderComponent } from '../shared/page-header.component';
 
     <ul>
       <li>GitHub: <a href="https://github.com/arafatomer66" target="_blank" rel="noreferrer">@arafatomer66</a></li>
-      <li>Email: <a href="mailto:sharedealnow@gmail.com">sharedealnow&#64;gmail.com</a></li>
+      <li>Email: <a href="mailto:arafatomer66@gmail.com">arafatomer66&#64;gmail.com</a></li>
     </ul>
 
     <kn-divider />

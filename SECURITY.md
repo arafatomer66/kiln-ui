@@ -2,7 +2,7 @@
 
 ## Reporting a vulnerability
 
-If you discover a security vulnerability in Kiln UI, please report it privately by emailing **sharedealnow@gmail.com**. Please do **not** open a public issue.
+If you discover a security vulnerability in Kiln UI, please report it privately by emailing **arafatomer66@gmail.com**. Please do **not** open a public issue.
 
 Include:
 

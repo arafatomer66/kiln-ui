@@ -8,4 +8,4 @@ In short:
 - Give credit, share knowledge, and welcome newcomers.
 - No harassment, discrimination, or personal attacks.
 
-If you experience or witness behavior that violates this code, please report it confidentially to **sharedealnow@gmail.com**. All reports are reviewed promptly and respectfully.
+If you experience or witness behavior that violates this code, please report it confidentially to **arafatomer66@gmail.com**. All reports are reviewed promptly and respectfully.

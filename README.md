@@ -154,7 +154,7 @@ If you find Kiln UI useful, please consider [starring on GitHub](https://github.
 Long-time Angular and Flutter engineer building products for emerging-market consumers.
 
 - GitHub: [@arafatomer66](https://github.com/arafatomer66)
-- Email: [sharedealnow@gmail.com](mailto:sharedealnow@gmail.com)
+- Email: [arafatomer66@gmail.com](mailto:arafatomer66@gmail.com)
 
 ---
 

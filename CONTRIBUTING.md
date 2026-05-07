@@ -75,4 +75,4 @@ Be kind, be specific, be patient. We follow the [Contributor Covenant](https://w
 
 ## Questions?
 
-Open a [Discussion](https://github.com/arafatomer66/kiln-ui/discussions) or email [sharedealnow@gmail.com](mailto:sharedealnow@gmail.com).
+Open a [Discussion](https://github.com/arafatomer66/kiln-ui/discussions) or email [arafatomer66@gmail.com](mailto:arafatomer66@gmail.com).
