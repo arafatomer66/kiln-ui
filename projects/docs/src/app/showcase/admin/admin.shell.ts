@@ -10,6 +10,7 @@ import {
   KnThemeService,
   KnToastService,
 } from 'kiln-ui';
+import { GlobalCmdkService } from '../../shared/global-cmdk.service';
 
 interface NavItem { slug: string; label: string; icon: string; }
 interface NavSection { heading: string; items: NavItem[]; }
@@ -70,16 +71,11 @@ interface NavSection { heading: string; items: NavItem[]; }
             <span class="admin__back-text">Back to Kiln UI</span>
           </a>
 
-          <div class="admin__search">
+          <button type="button" class="admin__search" (click)="openCmdK()" aria-label="Open command palette">
             <span class="admin__search-icon" aria-hidden="true">⌕</span>
-            <input
-              class="admin__search-input"
-              type="search"
-              placeholder="Search orders, customers, products…"
-              aria-label="Search"
-            />
+            <span class="admin__search-text">Search orders, customers, anything…</span>
             <span class="admin__search-shortcut">⌘K</span>
-          </div>
+          </button>
 
           <div class="admin__actions">
             <button type="button" class="admin__icon-btn" aria-label="Notifications" (click)="ringBell()">
@@ -264,6 +260,8 @@ interface NavSection { heading: string; items: NavItem[]; }
     .admin__back-text { font-family: var(--kn-font-mono); font-size: var(--kn-fs-xs); letter-spacing: var(--kn-tracking-mono); text-transform: uppercase; }
 
     .admin__search {
+      all: unset;
+      cursor: pointer;
       flex: 1;
       max-width: 480px;
       display: flex;
@@ -273,21 +271,14 @@ interface NavSection { heading: string; items: NavItem[]; }
       border-radius: var(--kn-r-sm);
       padding: 0 var(--kn-sp-3);
       height: 36px;
+      box-sizing: border-box;
+      transition: border-color var(--kn-dur-fast) var(--kn-ease);
     }
-    .admin__search:focus-within { box-shadow: var(--kn-ring); border-color: var(--kn-border-strong); }
+    .admin__search:hover { border-color: var(--kn-border-strong); }
+    .admin__search:focus-visible { box-shadow: var(--kn-ring); border-color: var(--kn-border-strong); }
 
     .admin__search-icon { color: var(--kn-text-muted); font-size: 14px; margin-right: var(--kn-sp-2); }
-
-    .admin__search-input {
-      flex: 1;
-      background: transparent;
-      border: none;
-      outline: none;
-      color: var(--kn-text);
-      font-family: inherit;
-      font-size: var(--kn-fs-base);
-    }
-    .admin__search-input::placeholder { color: var(--kn-text-muted); }
+    .admin__search-text { flex: 1; color: var(--kn-text-muted); font-size: var(--kn-fs-base); text-align: left; }
 
     .admin__search-shortcut {
       font-family: var(--kn-font-mono);
@@ -347,7 +338,7 @@ interface NavSection { heading: string; items: NavItem[]; }
       .admin.is-collapsed { grid-template-columns: 0 1fr; }
       .admin__brand-text, .admin__nav-label, .admin__nav-heading { display: none; }
       .admin__nav-link { justify-content: center; padding: var(--kn-sp-2); }
-      .admin__back-text, .admin__user-name, .admin__search-shortcut { display: none; }
+      .admin__back-text, .admin__user-name, .admin__search-shortcut, .admin__search-text { display: none; }
       .admin__content { padding: var(--kn-sp-4); }
     }
   `],
@@ -356,9 +347,12 @@ export class AdminShellComponent {
   private readonly themeService = inject(KnThemeService);
   private readonly toast = inject(KnToastService);
   private readonly router = inject(Router);
+  private readonly cmdk = inject(GlobalCmdkService);
 
   protected readonly collapsed = signal(false);
   protected readonly theme = computed(() => this.themeService.theme());
+
+  protected openCmdK(): void { this.cmdk.open(); }
 
   protected readonly sections: NavSection[] = [
     {

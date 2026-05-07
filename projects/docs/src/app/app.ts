@@ -1,6 +1,7 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, DestroyRef, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { KnToastContainerComponent } from 'kiln-ui';
+import { GlobalCmdkService } from './shared/global-cmdk.service';
 
 @Component({
   selector: 'app-root',
@@ -15,4 +16,8 @@ import { KnToastContainerComponent } from 'kiln-ui';
     :host { display: block; min-height: 100vh; }
   `],
 })
-export class App {}
+export class App {
+  constructor() {
+    inject(GlobalCmdkService).attach(inject(DestroyRef));
+  }
+}

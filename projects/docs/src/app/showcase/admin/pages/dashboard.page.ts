@@ -1,11 +1,14 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, signal } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import {
   KnAvatarComponent,
   KnBadgeComponent,
   KnButtonComponent,
   KnCardComponent,
+  KnDateRangePickerComponent,
   KnDividerComponent,
   KnProgressComponent,
+  KnSkeletonComponent,
   KnTableComponent,
   KnColumn,
 } from 'kiln-ui';
@@ -24,8 +27,10 @@ interface Stat {
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
+    FormsModule,
     KnCardComponent, KnButtonComponent, KnBadgeComponent, KnAvatarComponent,
     KnDividerComponent, KnProgressComponent, KnTableComponent,
+    KnDateRangePickerComponent, KnSkeletonComponent,
   ],
   template: `
     <header class="page-head">
@@ -35,22 +40,35 @@ interface Stat {
         <p class="page-head__sub">Here's what's happened on ShareDeal in the last 24 hours.</p>
       </div>
       <div class="page-head__cta">
+        <div class="page-head__period">
+          <kn-date-range-picker placeholder="Last 30 days" />
+        </div>
         <kn-button variant="outline">Export</kn-button>
         <kn-button variant="solid">+ New order</kn-button>
       </div>
     </header>
 
     <section class="stats">
-      @for (stat of stats; track stat.label) {
-        <kn-card padding="md">
-          <div class="stat__label">{{ stat.label }} · {{ stat.labelBn }}</div>
-          <div class="stat__value">{{ stat.value }}</div>
-          <div class="stat__delta" [attr.data-trend]="stat.trend">
-            @if (stat.trend === 'up') { ↑ }
-            @if (stat.trend === 'down') { ↓ }
-            {{ stat.delta }}
-          </div>
-        </kn-card>
+      @if (loading()) {
+        @for (i of [1, 2, 3, 4]; track i) {
+          <kn-card padding="md">
+            <kn-skeleton variant="text" width="80px" />
+            <div style="margin: 8px 0;"><kn-skeleton variant="heading" width="120px" height="32px" /></div>
+            <kn-skeleton variant="text" width="100px" />
+          </kn-card>
+        }
+      } @else {
+        @for (stat of stats; track stat.label) {
+          <kn-card padding="md">
+            <div class="stat__label">{{ stat.label }} · {{ stat.labelBn }}</div>
+            <div class="stat__value">{{ stat.value }}</div>
+            <div class="stat__delta" [attr.data-trend]="stat.trend">
+              @if (stat.trend === 'up') { ↑ }
+              @if (stat.trend === 'down') { ↓ }
+              {{ stat.delta }}
+            </div>
+          </kn-card>
+        }
       }
     </section>
 
@@ -162,7 +180,8 @@ interface Stat {
     }
 
     .page-head__sub { color: var(--kn-text-muted); margin: 4px 0 0; font-size: var(--kn-fs-base); }
-    .page-head__cta { display: flex; gap: var(--kn-sp-2); }
+    .page-head__cta { display: flex; gap: var(--kn-sp-2); align-items: flex-end; }
+    .page-head__period { width: 220px; }
 
     .stats {
       display: grid;
@@ -235,7 +254,13 @@ interface Stat {
     .goal__value { font-family: var(--kn-font-mono); color: var(--kn-text-muted); }
   `],
 })
-export class DashboardPage {
+export class DashboardPage implements OnInit {
+  protected readonly loading = signal(true);
+
+  ngOnInit(): void {
+    setTimeout(() => this.loading.set(false), 900);
+  }
+
   protected readonly stats: Stat[] = [
     { label: 'Revenue',    labelBn: 'আয়',         value: '৳1,84,320', delta: '+12.4% vs last week', trend: 'up'   },
     { label: 'Orders',     labelBn: 'অর্ডার',      value: '342',       delta: '+8.1%',                trend: 'up'   },

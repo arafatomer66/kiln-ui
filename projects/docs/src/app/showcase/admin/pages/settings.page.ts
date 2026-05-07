@@ -3,7 +3,9 @@ import { FormsModule, ReactiveFormsModule, FormBuilder, FormControl } from '@ang
 import {
   KnAccordionComponent, KnAccordionItemComponent, KnAlertComponent,
   KnAvatarComponent, KnBadgeComponent, KnButtonComponent, KnCardComponent,
-  KnCheckboxComponent, KnDatePickerComponent, KnDividerComponent, KnInputComponent,
+  KnCheckboxComponent, KnDatePickerComponent, KnDividerComponent,
+  KnFileUploadComponent, KnFileItem, KnInputComponent,
+  KnOtpInputComponent, KnPhoneInputComponent,
   KnRadioComponent, KnRadioGroupComponent, KnSelectComponent, KnSelectOption,
   KnStepperComponent, KnStep, KnSwitchComponent, KnTabsComponent, KnTabComponent,
   KnTabContentDirective, KnTextareaComponent, KnToastService,
@@ -20,7 +22,7 @@ import {
     KnSelectComponent, KnCheckboxComponent, KnSwitchComponent, KnRadioGroupComponent,
     KnRadioComponent, KnDatePickerComponent, KnAccordionComponent, KnAccordionItemComponent,
     KnAlertComponent, KnAvatarComponent, KnBadgeComponent, KnDividerComponent,
-    KnStepperComponent,
+    KnStepperComponent, KnFileUploadComponent, KnOtpInputComponent, KnPhoneInputComponent,
   ],
   template: `
     <header class="page-head">
@@ -40,7 +42,14 @@ import {
             <div class="profile">
               <div class="profile__avatar">
                 <kn-avatar size="xl" name="Omer Arafat" />
-                <kn-button variant="outline" size="sm">Change photo</kn-button>
+                <kn-file-upload
+                  label="Upload new photo"
+                  hint="JPG or PNG, up to 2MB"
+                  [multiple]="false"
+                  accept="image/jpeg,image/png"
+                  [maxSize]="2 * 1024 * 1024"
+                  [maxFiles]="1"
+                />
               </div>
               <div class="profile__form">
                 <div class="form-row">
@@ -48,7 +57,7 @@ import {
                   <kn-input label="Email" type="email" [formControl]="email" />
                 </div>
                 <div class="form-row">
-                  <kn-input label="Phone" type="tel" placeholder="+880 1711 234567" />
+                  <kn-phone-input label="Mobile number" defaultCountry="BD" />
                   <kn-select label="Timezone" [options]="timezones" [(ngModel)]="timezone" />
                 </div>
                 <kn-textarea label="Bio" [rows]="3" placeholder="Tell us about yourself…" />
@@ -165,11 +174,34 @@ import {
 
             <kn-divider />
 
-            <div class="form-row">
-              <kn-input label="Email" type="email" placeholder="teammate@example.com" />
-              <kn-select label="Role" [options]="roles" [(ngModel)]="role" />
-            </div>
-            <kn-checkbox label="Send welcome guide along with the invite" [(ngModel)]="sendGuide" />
+            @switch (step()) {
+              @case (0) {
+                <div class="form-row">
+                  <kn-input label="Email" type="email" placeholder="teammate@example.com" />
+                  <kn-select label="Role" [options]="roles" [(ngModel)]="role" />
+                </div>
+                <kn-checkbox label="Send welcome guide along with the invite" [(ngModel)]="sendGuide" />
+              }
+              @case (1) {
+                <kn-alert tone="info" title="Verify your number">
+                  We need to confirm you have access to the team owner's phone before sending invitations.
+                </kn-alert>
+                <div class="otp-wrap">
+                  <kn-otp-input
+                    label="Verification code"
+                    helperText="Enter the 6-digit code we sent to +880 1711 234567"
+                    (completed)="onOtp($event)"
+                  />
+                </div>
+              }
+              @case (2) {
+                <kn-textarea
+                  label="Welcome message"
+                  [rows]="4"
+                  placeholder="Hi! Welcome to the team. Here's a quick onboarding guide…"
+                />
+              }
+            }
 
             <div class="actions">
               <kn-button variant="outline" [disabled]="step() === 0" (clicked)="step.set(step() - 1)">Back</kn-button>
@@ -215,6 +247,7 @@ import {
     .muted { color: var(--kn-text-muted); font-size: var(--kn-fs-sm); }
 
     .actions { display: flex; gap: var(--kn-sp-2); margin-top: var(--kn-sp-5); }
+    .otp-wrap { padding: var(--kn-sp-5) 0; }
   `],
 })
 export class SettingsPage {
@@ -269,5 +302,10 @@ export class SettingsPage {
     } else {
       this.toast.success('Invite sent', 'Your teammate will receive an email shortly.');
     }
+  }
+
+  protected onOtp(code: string): void {
+    this.toast.success('Code verified', `Accepted ${code}. Continue to the welcome step.`);
+    if (this.step() === 1) this.step.set(2);
   }
 }

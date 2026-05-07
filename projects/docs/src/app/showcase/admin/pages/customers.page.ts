@@ -3,10 +3,10 @@ import { DialogRef } from '@angular/cdk/dialog';
 import { FormsModule } from '@angular/forms';
 import {
   KnAvatarComponent, KnBadgeComponent, KnButtonComponent, KnCardComponent,
-  KnCheckboxComponent, KnChipComponent, KnDividerComponent, KnInputComponent,
-  KnModalComponent, KnModalFooterComponent, KnModalService,
-  KnSelectComponent, KnSelectOption, KnTabsComponent, KnTabComponent,
-  KnTabContentDirective, KnToastService,
+  KnCheckboxComponent, KnChipComponent, KnDividerComponent, KnEmptyStateComponent,
+  KnInputComponent, KnModalComponent, KnModalFooterComponent, KnModalService,
+  KnPhoneInputComponent, KnSelectComponent, KnSelectOption,
+  KnTabsComponent, KnTabComponent, KnTabContentDirective, KnToastService,
 } from 'kiln-ui';
 import { Customer, MOCK_CUSTOMERS } from '../mock-data';
 
@@ -15,14 +15,14 @@ import { Customer, MOCK_CUSTOMERS } from '../mock-data';
   imports: [
     FormsModule,
     KnModalComponent, KnModalFooterComponent, KnButtonComponent, KnInputComponent,
-    KnSelectComponent, KnCheckboxComponent,
+    KnSelectComponent, KnCheckboxComponent, KnPhoneInputComponent,
   ],
   template: `
     <kn-modal title="Add customer">
       <div class="form">
         <kn-input label="Full name" placeholder="Aisha Rahman" [(ngModel)]="name" />
         <kn-input label="Email" type="email" placeholder="aisha@example.com" [(ngModel)]="email" />
-        <kn-input label="Phone" type="tel" placeholder="+880 1711 234567" [(ngModel)]="phone" />
+        <kn-phone-input label="Mobile number" defaultCountry="BD" [(ngModel)]="phone" />
         <kn-select label="Area" [options]="areas" [(ngModel)]="area" />
         <kn-checkbox label="Send welcome email" [(ngModel)]="sendEmail" />
       </div>
@@ -65,7 +65,7 @@ class AddCustomerModal {
   imports: [
     FormsModule,
     KnCardComponent, KnButtonComponent, KnAvatarComponent, KnBadgeComponent,
-    KnChipComponent, KnInputComponent, KnDividerComponent,
+    KnChipComponent, KnInputComponent, KnDividerComponent, KnEmptyStateComponent,
     KnTabsComponent, KnTabComponent, KnTabContentDirective,
   ],
   template: `
@@ -89,22 +89,31 @@ class AddCustomerModal {
           <kn-chip variant="soft" [removable]="true">Area: Dhanmondi</kn-chip>
         </div>
         <kn-divider />
-        <ul class="list__items">
-          @for (c of filtered(); track c.id) {
-            <li
-              class="list__item"
-              [class.is-selected]="selected()?.id === c.id"
-              (click)="selected.set(c)"
-            >
-              <kn-avatar size="sm" [name]="c.name" />
-              <div class="list__body">
-                <div class="list__name">{{ c.name }}</div>
-                <div class="list__meta">{{ c.area }} · {{ c.orders }} orders</div>
-              </div>
-              <kn-badge variant="soft" [tone]="statusTone(c.status)">{{ c.status }}</kn-badge>
-            </li>
-          }
-        </ul>
+        @if (filtered().length === 0) {
+          <kn-empty-state
+            size="sm"
+            tone="muted"
+            title="No matches"
+            [description]="'No customers found for &quot;' + search() + '&quot;.'"
+          />
+        } @else {
+          <ul class="list__items">
+            @for (c of filtered(); track c.id) {
+              <li
+                class="list__item"
+                [class.is-selected]="selected()?.id === c.id"
+                (click)="selected.set(c)"
+              >
+                <kn-avatar size="sm" [name]="c.name" />
+                <div class="list__body">
+                  <div class="list__name">{{ c.name }}</div>
+                  <div class="list__meta">{{ c.area }} · {{ c.orders }} orders</div>
+                </div>
+                <kn-badge variant="soft" [tone]="statusTone(c.status)">{{ c.status }}</kn-badge>
+              </li>
+            }
+          </ul>
+        }
       </kn-card>
 
       @if (selected(); as c) {
